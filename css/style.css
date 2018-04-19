@@ -1,0 +1,207 @@
+/* CSS Document */
+
+body{
+	height: 1000px;
+	font-family:'Microsoft YaHei';
+	background-color: #f5f5f5;
+}
+
+a:link, a:active ,a:hover ,a:visited{
+	text-decoration: none;
+}
+
+/*顶部固定位置导航条上半部分*/
+.header{
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	z-index: 9999;
+	font-size: 12px;
+	color: #808080;
+}
+
+.header .top{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: right;
+	background-color: #f2f2f2;
+}
+
+.header .top .phone{
+	display:inline;
+	padding-right: 85px;
+}
+
+.header .top .phone img{
+	width: 20px;
+	height: 16px;
+	position: relative;
+	top:3px;
+	right: 2px;
+}
+
+.header .top .phone .phone_number{
+	color: #808080;
+	font-size: 14px;
+	font-family:'Microsoft YaHei';
+}
+
+.header .top a{
+	text-decoration: none;
+	color: #808080;
+	padding-right: 12px;
+}
+
+.header .top .user{
+	display:inline;
+	padding-right: 44px;
+}
+
+.header .top .user span{
+	color: black;
+}
+
+.header .top .user{
+	width: 100px;
+}
+
+.header .top .user .register{
+	color: #f13451;
+	padding-left: 11px;
+	padding-right: 15px;
+}
+
+.header .top .buy{
+	display:inline;
+	padding-right: 26px;
+}
+
+.header .top .buy img{
+	position: relative;
+	top: 2px;
+	right: 5px;
+}
+
+.header .top .sell{
+	display:inline;
+	padding-right: 37px;
+}
+
+.header .top .sell img{
+	position: relative;
+	top: 2px;
+	right: 5px;
+}
+
+.header .top .list{
+	display:inline;
+	padding-right: 50px;
+}
+
+.header .top .list img{
+	position: relative;
+	top: 2px;
+	right: 2px;
+}
+
+.header .top .list span{
+	border-radius: 10px;
+	background-color: #00aeef;
+	color: white;
+	padding: 0 10px;
+}
+
+/*顶部固定位置导航条logo和搜索部分*/
+.wid{
+	width: 100%;;
+	background-color: white;
+	border-bottom: 1px solid #2A8FD3;
+}
+
+.search{
+	margin: 0 auto;
+	width: 1200px;
+	height: 60px;
+}
+
+.search img{
+	padding: 10px 0;
+}
+
+.search .find{
+	padding-left: 177px;
+	display: inline;
+}
+
+.search .find input{
+	position: absolute;
+	top: 50px;
+	height: 30px;
+	width: 583px;
+	outline: none;
+	border: 2px solid #2a8fd3;
+	border-radius: 16px;
+	padding-left: 20px;
+	padding-right: 60px;
+	height: 32px;
+	line-height: 32px;
+}
+
+.search .find img{
+	position: relative;
+	top: -6px;
+	left: 540px;
+}
+
+/*顶部部分结束*/
+
+
+/*导航条部分开始*/
+.headerbox{
+	width: 100%;
+	height: 100px;
+}
+
+nav{
+	height: 48px;
+	background-color: #2A8FD3;
+}
+
+nav .container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+nav ul li{
+	height: 48px;
+	text-align: center;
+	width: 14%;
+	float: left;
+}
+
+nav ul li a{
+	text-decoration: none;
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	color: white;
+	font-size: 16px;
+}
+
+nav ul li a img{
+	padding-right: 5px;
+}
+
+/*导航条结束*/
+
+/*轮播图开始*/
+.carousel{
+	width: 100%;
+	height: 375px;
+}
+
+.unable{
+	display: none;
+}
+/*轮播图结束*/

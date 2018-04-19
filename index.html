@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>佳沃思商城</title>
+		<link rel="stylesheet" href="css/basic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/ft-carousel.css" />
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<script src="js/jquery.min.js"></script>
+    </head>
+
+    <body>
+       	<div class="header">
+			<div class="top">
+				<div class="phone">
+					<img src="img/header/call.png" >
+					<i class="phone_number">400-185-5188</i>
+				</div>
+				<div class="user">
+					<a href="#">你好，请登录</a>
+					<span>|</span>
+					<a href="#" class="register">立即注册</a>
+				</div>
+				<a href="#" class="buy">
+					<img src="img/header/po.png" >
+					采购系统
+				</a>
+				<a href="#" class="sell">
+					<img src="img/header/sup.png" >
+					供应商系统
+				</a>
+				<a href="#" class="list">
+					<img src="img/header/shopping-car.png" >
+					采购清单
+					<span>0</span>
+				</a>
+			</div>
+			<div class="wid">
+				<div class="search">
+					<img src="img/header/logoBox.png">
+					<div class="find">
+						<input type="search" placeholder="商品名称、品牌、货号">
+						<img src="img/header/search.png">
+					</div>
+				</div>
+			</div>
+		</div> <!--顶部固定部分结束-->
+		
+		<div class="headerbox"></div><!--撑高度-->
+		<nav>
+			<div class="container">
+				<ul>
+					<li><a href="#"><img src="img/header/dentistry.png">全部商品</a></li>
+					<li><a href="#">品牌专区</a></li>
+					<li><a href="#">增值服务</a></li>
+					<li><a href="#">技术培训</a></li>
+					<li><a href="#">产品培训</a></li>
+					<li><a href="#">咨询服务项目</a></li>
+					<li><a href="#">社区</a></li>
+				</ul>
+			</div>
+		</nav><!--导航条结束-->
+		
+		<div class="carousel">
+			<div class="ft-carousel" id="carousel">
+				<ul class="carousel-inner">
+					<li class="carousel-item"><img src="img/header/1.jpg" /></li>
+					<li class="carousel-item"><img src="img/header/2.png" /></li>
+					<li class="carousel-item"><img src="img/header/3.png" /></li>
+					<li class="carousel-item"><img src="img/header/4.jpg" /></li>
+					<li class="carousel-item"><img src="img/header/5.jpg" /></li>
+				</ul>
+			</div>
+		</div><!--轮播图结束-->
+		
+		
+
+    </body>
+    <script src="js/main.js"></script>
+
+	
+	<script src="js/ft-carousel.min.js"></script>
+	<script type="text/javascript">
+		$("#carousel").FtCarousel();
+	</script>
+</html>
