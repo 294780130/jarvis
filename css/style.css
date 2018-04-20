@@ -1,13 +1,17 @@
 /* CSS Document */
 
 body{
-	height: 1000px;
 	font-family:'Microsoft YaHei';
 	background-color: #f5f5f5;
 }
 
 a:link, a:active ,a:hover ,a:visited{
 	text-decoration: none;
+}
+
+.container{
+	width: 1200px;
+	margin: 20px auto;
 }
 
 /*顶部固定位置导航条上半部分*/
@@ -205,3 +209,275 @@ nav ul li a img{
 	display: none;
 }
 /*轮播图结束*/
+
+/*品牌条开始*/
+.container .brand{
+	text-align: right;
+	height: 333px;
+	background-color: white;
+}
+
+.container .brand .more{
+	height: 43px;
+	line-height: 43px;
+	padding-right: 15px;
+}
+/*品牌条结束*/
+
+.container .brand .brand_list{
+	width: 1096px;
+	height: 256px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.container .brand .brand_list .brand_left{
+	width: 190px;
+	height: 164px;
+	text-align: center;
+	border: 1px solid #ddd;
+	padding-top: 89px;
+	float: left;
+}
+
+.container .brand .brand_list .brand_left .title{
+	font-size: 22px;
+	color: #333;
+	padding-top: 8px;
+}
+
+.container .brand .brand_list .brand_right{
+	width: 900px;
+	height: 256px;
+	display: block;
+	float: left;
+}
+
+.container .brand .brand_list .brand_right ul li{
+	width: 149px;
+	height: 127px;
+	line-height: 127px;
+	float: left;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.container .brand .brand_list .brand_right ul li a{
+	display: inline-block;
+}
+
+.container .brand .brand_list .brand_right ul li a img{
+    vertical-align: middle;
+}
+.container .brand .brand_list .brand_right ul li.last6{
+	height: 125px;
+	border-bottom:  1px solid #ddd;
+}
+/*品牌条结束*/
+
+/*商品分类展示部分开始*/
+.category_box{
+	width: 1200px;
+	height: 670px;
+	margin: 0 auto;	
+	padding-top: 20px;
+}
+.category_box img{
+	vertical-align: middle;
+}
+.category_box .category_top{
+	width: 1200px;
+	padding: 20px 0;
+	height: 30px;
+	line-height: 30px;
+	font-size: 22px;
+}
+.category_box .category_top a.category_title{
+	padding-left: 10px;
+}
+.category_box .category_top a.more{
+	float: right;
+	height: 22px;
+	line-height: 22px;
+	font-size: 14px;
+}
+.category_box .goods{
+	padding-top: 20px;
+}
+.category_box .goods img{
+	vertical-align: middle;
+}
+.category_box .goods .goods_left{
+	width: 240px;
+	height: 597px;
+	float: left;
+	overflow: hidden;
+}
+.category_box .goods .goods_left img{
+	width: 240px;
+	height: 597px;
+}
+.category_box .goods .goods_right ul li{
+	width: 238px;
+	height: 298px;
+	background-color: white;
+	margin-right: 2px;
+	float: left;
+	position: relative;
+}
+.category_box .goods .goods_right ul li.first4{
+	margin-bottom: 2px;
+}
+.category_box .goods .goods_right ul li a.goods_link{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 200px;;
+}
+.category_box .goods .goods_right ul li img.promotion{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.category_box .goods .goods_right ul li img.goods_pic{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+.category_box .goods .goods_right ul li a.goods_name{
+	display: block;
+	position: relative;
+	bottom: 20px;
+	color: #808080;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 10px;
+	background-color: white;
+}
+.category_box .goods .goods_right ul li a.goods_name:hover{
+	color: #333;
+}
+.category_box .goods .goods_right ul li a.goods_name_long{
+	height: 38px;
+	display: block;
+	margin: 5px auto;
+	padding: 0 10px;
+	position: relative;
+	bottom: 20px;
+}
+.category_box .goods .goods_right ul li a.goods_name_long:hover{
+	color: #0072bc;
+}
+.category_box .goods .goods_right ul li a.goods_btn{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	bottom: 10px;
+	left: 10px;
+}
+.category_box .goods .goods_right ul li a.goods_btn span.goods_cut{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ff0619;
+	border: 1px solid red;
+	border-radius: 4px;
+	padding: 0 10px;
+	height: 26px;
+	line-height: 26px;
+}
+/*商品分类展示部分结束*/
+
+/*底部footer和版权部分开始*/
+footer{
+	width: 100%;
+	height: 350px;
+	background-color: #2A8FD3;
+	margin-top: 20px;
+}
+footer .container{
+	width: 1200px;
+	margin: 0 auto;
+}
+footer .container .pics{
+	height: 110px;
+	padding-top: 20px;
+	padding-left: 10%;
+	border-bottom: 1px solid #55A5DC;
+}
+footer .container .pics .every_pic{
+	width: 20%;
+	height: 110px;
+	padding-top: 20px;
+	float: left;
+	margin-right: 30px;
+}
+footer .container .pics .every_pic img{
+	display: block;
+	width: 50px;
+	vertical-align: middle;
+	float: left;
+}
+footer .container .pics .every_pic img.pic1{
+	height: 61px;
+}
+footer .container .pics .exp_big{
+	color: white;
+	font-size: 25px;
+	padding-left: 10px;
+	float: left;
+}
+footer .container .pics .exp_small{
+	display: block;
+	color: #AAD2ED;
+	font-size: 17px;
+	padding-left: 10px;
+	float: left;	
+}
+footer .container .about{
+	padding: 20px 0 0 64px;
+	color: white;
+	font-size: 16px;
+}
+footer .container .about h4{
+	display: block;
+	text-align: center;
+	padding-bottom: 10px;
+}
+footer .container .about ul li.item{
+	width: 18%;
+	text-align: center;
+	float: left;
+}
+footer .container .about a{
+	display: block;
+	padding: 10px 0;
+	font-size: 13px;
+	color: white;
+}
+.copyright{
+	padding-top: 30px;
+	width: 900px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+.copyright .left_part img{
+	float: left;
+	margin-right: 20px;
+}
+.copyright .right_part{
+	color: #808080;
+	font-size: 12px;
+}
+.copyright .right_part img{
+	width: 15px;
+	height: 15px;
+}
+.copyright .right_part a{
+	color: #0072bc;
+}
+.copyright .right_part a:hover{
+	color: #335b7c;
+}
+/*底部footer和版权部分结束*/

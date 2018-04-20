@@ -1,0 +1,3239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>佳沃思商城</title>
+    <meta name="keywords" content="齿科、牙科、口腔、牙科耗材、齿科耗材、口腔器械、牙科器材、齿科器材、佳沃思、佳沃思商城、佳沃思平台牙科平台、齿科平台、齿科商城、牙科商城、牙科一站式、齿科一站式、口腔器材一站式、齿科供应链、口腔供应链、牙科供应链">
+    <meta name="description" content="佳沃思平台——牙科一站式B2B采购平台，为连锁和独立的民营牙科医疗机构提供各类优质的医疗器械、耗材与设备等商品，同时提供完整的商品证照信息、透明可追溯的供应链和科学的诊所采购管理系统，让民营牙科实现轻松采购。" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=20171211" />
+    <link rel="stylesheet" href="/css/comm.css?v=20180103" />
+    <link rel="stylesheet" href="/css/style.css?v=20171221" />
+    <link rel="stylesheet" href="/css/purchase.css?v=201705032"/>
+    <link rel="stylesheet" href="/css/select2.min.css" />
+    <link rel="stylesheet" href="/css/iconfont.css" />
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    
+<link rel="stylesheet" href="/css/magiczoomplus.css" />
+<link rel="stylesheet" href="/css/video-js.min.css" />
+<link rel="stylesheet" href="/css/iconfontFile.css" />
+<link rel="stylesheet" href="/css/fileUpload.css" />
+<style>
+	 #real:hover{
+	  opacity: 0.6;
+	  cursor:pointer;
+	 }
+	 #mo{
+	  display: none;/*隐藏*/
+	  width: 100%;
+	  height: 100%;
+	  position: fixed;
+	  overflow: auto;
+	  background-color: rgba(0,0,0,0.3);
+	  top: 0px;
+	  left: 0px;
+	  z-index: 10;
+	  overflow: hidden;
+	 }
+	 #moimg{
+	  display: block;
+	  margin:100px auto;
+	  width: 500px;
+	  height:500px;
+
+	 }
+	 #caption{
+	  text-align: center;
+	  margin: 15px auto;
+	  width: 60%;
+	  max-height: 750px;
+	  font-size: 20px;
+	  color:#ccc;
+	 }
+	 #moimg,#caption{
+	  -webkit-animation: first 1s;
+	  -o-animation: first 1s;
+	  animation: first 1s;
+	 }
+	 @keyframes first{
+	  from{transform: scale(0.1);}
+	  to{transform: scale(1);}
+	 }
+
+	 @media only screen and(max-width:750px ) {
+	  #moimg{
+	   width: 100%;
+	  }
+	 }
+	 .addCommentReply i{
+	    width:20px;
+	    height:16px;
+	    display:inline-block;
+	    background:url("/img/comment.png") no-repeat;
+	    margin-right: 5px;
+	 }
+	  .addCommentReply span{
+	    position:relative;
+	    bottom:4px;
+        font-size: 12px;
+        color: #333;
+	  }
+	  .addCommentReply{
+	      margin-right:20px;
+	  }
+	  .editPraise i{
+	    width:16px;
+        height:16px;
+        display:inline-block;
+        background:url("/img/praise.png") no-repeat;
+        margin-right: 5px;
+	  }
+	  .editPraise span{
+      	    position:relative;
+      	    bottom:4px;
+      	    font-size:12px;
+      	    color:#333;
+      }
+      .addReplyReply i{
+            width:20px;
+            height:16px;
+            display:inline-block;
+            background:url("/img/comment.png") no-repeat;
+            margin-right: 5px;
+      }
+      .addReplyReply{
+          margin-right:20px;
+      }
+      .addReplyReply span{
+            position:relative;
+            bottom:4px;
+            font-size:12px;
+            color:#333;
+      }
+      .uploadFileBt{
+        display:none'
+      }
+      .cleanFileBt{
+        display:none;
+      }
+      .icon-shangchuan{
+        display:none;
+      }
+      .picture{
+        width:120px;
+        height:120px;
+        float:left;
+        margin:5px;
+      }
+     .saleTag{
+         display: inline-block;
+         width: 117px;
+         height: 26px;
+         line-height:26px;
+         text-align: center;
+         border: solid 1px #ff0000;
+         border-radius: 4px;
+     }
+	 </style>
+
+</head>
+<body>
+<!--header-->
+<div id="header">
+    <style>
+        .headmenu>.inner>ul>li .dropdown-menu{
+            background-color: #2A8FD3;
+        }
+        .dropdown-menu li{
+                    background-color: #2A8FD3;
+        }
+        .dropdown-menu li:hover{
+            background-color: #fff;
+        }
+        .dropdown-menu li:active{
+                    background-color: #fff;
+        }
+        a#modalAgency{
+            color:#337ab7;
+        }
+        a#modalAgency:hover{
+            color:#FE5E52;
+        }
+        .headmenu>.inner>ul>li .dropdown-menu>li>a:focus,.headmenu>.inner>ul>li .dropdown-menu>li>a:hover{color:#00aeef;background-color:#fff}
+        .searchBox{
+            height: 50px;
+            width:100%;
+            position:fixed;
+            top:40px;
+            z-index:9993;
+            background:#fff;
+            border-bottom:1px solid #2A8FD3;
+        }
+
+        #poList{
+            width: 88px;
+            border: 1px solid #E2E2E2;
+            position: fixed;
+            background: #fff;
+            margin-top: -1px;
+            margin-left: -1px;
+            border-top: 0 none;
+            color: red;
+            right: 292px;
+            z-index: 100000;
+            height:52px;
+            display:none;
+
+        }
+        #poList a{
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            height: 26px;
+            line-height: 26px;
+            float:left;
+            font-size:12px;
+            color:#666;
+        }
+        #poList a:hover{
+            background-color: #f5f5f5;
+            color:#2a8fd3;
+        }
+        #poSystem{
+            width: 88px;
+            position: relative;
+            left: 9px;
+            height: 40px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+    <div class="headbar" style="position:relative;">
+        <div class="inner fixBox" style="position: fixed;width: 100%;background: #f2f2f2;z-index: 9999;top:0px;left:0px;overflow:hidden;height:40px;">
+            <!--<a href="/footerbanner/doubletwelve" target="_blank" style="display:block;position: relative;left:50%;margin-left:-960px;width:1920px;">
+                <img src="/img/doubleTwelveTop.jpg">
+            </a>-->
+            <div class="call"><i><img src="/img/call.png" style="position:relative;bottom:6px;right:5px;"/></i><i class="callphone" style="color:#808080">400-185-5188</i></div>
+                        <div class="barlogin"> <a href="/user/login" style="color:#808080">你好，请登录</a>|<a href="/user/register" style="color:#f13451">立即注册</a></div>
+                        <a href="http://pro.jwsmed.com/" id="poSystem"  target="_blank" style="color:#808080;"><i><img src="/img/po.png" style="position:relative;bottom:3px;right:5px;"/></i> 采购系统</a>
+            <div id="poList">
+                <a href="http://pro.jwsmed.com//order/index">订单管理</a>
+                <a href="http://pro.jwsmed.com//coupon/">优惠券<span style="color:#666;" id="couponNum"></span></a>
+            </div>
+            <a href="http://sup.jwsmed.com/" target="_blank" style="color:#808080;"><i style="margin-left: 25px"><img src="/img/sup.png" style="position:relative;bottom:3px;right:5px;"/></i> 供应商系统</a>
+            <a href="/user/cart" class="buycar" style="min-width:100px;padding-right:50px;color:#808080;" target="_blank"><i class="shopping-car"><img src="/img/shopping-car.png" style="position:relative;bottom:3px;right:5px;"/></i>采购清单 <span id="cartCnt" style="background:##2a8fd3;color:#fff;">0</span></a>
+        </div>
+        <!--<div class="searchBox" style="height: 50px;width:100%;display:none;position:fixed;margin-top:40px;z-index:9999;background:#fff;border-bottom:1px solid #2A8FD3">-->
+            <!--<div class="inner">-->
+                <!--<div class="logoer" style="margin-top:5px;">-->
+                    <!--<a href="/" style="width:130px;height:36px;background-image:url(/img/logoBox.png)"></a>-->
+                <!--</div>-->
+                <!--<div class="search" style="margin: 10px 0 0 180px;padding: 0 20px;border-radius: 16px;width: 583px;height: 32px;">-->
+                    <!--<input type="search" class="searchtext1" placeholder="商品名称、品牌、货号" style="height:30px;width:520px;"/>-->
+                    <!--<input class="searchsubmit1" style="margin-top: 3px;width:20px;height:20px;">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div class="headinfo">
+        <div class="inner">
+            <div class="logoer">
+                <a href="/" style="width:130px;height:36px;background-image:url(/img/logoBox.png)"></a>
+            </div>
+            <div class="search" style="margin: 10px 0 0 180px;padding: 0 20px;border-radius: 16px;width: 583px;height: 32px;">
+                <input type="search" class="searchtext" placeholder="商品名称、品牌、货号" style="height:30px;width:520px;"/>
+                <input class="searchsubmit"   style="margin-top: 3px;width:20px;height:20px;">
+            </div>
+        </div>
+    </div>
+  <div class="headmenu" style="background: #2A8FD3;">
+         <div class="inner">
+             <ul>
+                 <li class="btn-group dropdown" style="width:14%;height:48px;text-align:center;">
+                     <a href="javascript:void(0)"  class="dropdown-toggle allPro" style="padding:0;" data-hover="dropdown" data-toggle="dropdown"><img src="/img/dentistry.png" style="padding-right: 5px;"/>全部商品</a>
+                     <ul class="dropdown-menu" role="menu" style="min-height:302px;margin-top: -1px;">
+
+                         <li class="active" style="margin-top:-5px;"><a href="javascript:void(0);">正畸类 </a>
+                             <div class="showbig" style="min-height:300px;left:165px;">
+                                 <dl>
+                                     <dt><a href="javascript:void(0)">正畸粘接剂</a></dt>
+                                     <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%89%98%E6%A7%BD%E7%B2%98%E6%8E%A5" target="_blank">正畸粘结剂</a>
+
+                                     </dd>
+                                     <dt><a href="javascript:void(0)">正畸托槽</a></dt>
+                                     <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%89%98%E6%A7%BD" target="_blank">自锁托槽</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%89%98%E6%A7%BD" target="_blank">普通托槽</a>
+                                     </dd>
+                                     <dt><a href="javascript:void(0)">正畸弓丝</a></dt>
+                                     <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E9%95%8D%E9%92%9B" target="_blank">镍钛弓丝</a>
+                                     </dd>
+                                     <dt><a href="javascript:void(0)">正畸附件</a></dt>
+                                     <dd>
+                                        <a href="http://www.jwsmed.com/product/search?kw=%E8%88%8C%E4%BE%A7" target="_blank">舌侧扣</a>
+                                        <a href="http://www.jwsmed.com/product/search?kw=%E7%89%B5%E5%BC%95%E9%92%A9" target="_blank">牵引钩</a>
+                                     </dd>
+
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="javascript:void(0)">预防齿科</a>
+                             <div class="showbig" style="min-height:300px;left:165px;" >
+                                 <dl>
+                                     <dt><a href="javascript:void(0)">预防关联用品</a></dt>
+                                     <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E7%AA%9D%E6%B2%9F" target="_blank">窝沟封闭</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%8A%A4%E7%89%99%E7%B4%A0" target="_blank"> 防龋用品</a>
+                                     </dd>
+                                       <dt><a href="javascript:void(0)">牙周维护</a></dt>
+                                            <dd>
+                                                <a href="http://www.jwsmed.com/product/search?kw=%E7%89%99%E5%91%A8" target="_blank">牙周制剂</a>
+                                             </dd>
+                                       <dt><a href="javascript:void(0)">抛光用品</a></dt>
+                                       <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%8A%9B%E5%85%89" target="_blank">抛光器械</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%8A%9B%E5%85%89%E8%86%8F" target="_blank">抛光膏</a>
+                                        </dd>
+                                        <dt><a href="javascript:void(0)">口腔清洁用品</a></dt>
+                                        <dd>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E7%89%99%E5%88%B7" target="_blank">牙刷</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E6%BC%B1" target="_blank">漱口水</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E9%BD%BF%E9%97%B4%E5%88%B7" target="_blank">齿间刷</a>
+                                        </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="javascript:void(0)">牙体牙髓</a>
+                             <div class="showbig" style="min-height:300px;left:165px;">
+                                 <dl>
+                                     <dt><a href="javascript:void(0)">牙冠充填材料</a></dt>
+                                     <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E5%AF%8C%E5%A3%AB" target="_blank">水门汀类</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%B5%81%E5%8A%A8" target="_blank">流动树脂</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E5%A4%8D%E5%90%88%E6%A0%91%E8%84%82" target="_blank">复合树脂</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=GC%20%E6%9A%82%E5%B0%81%E7%8E%8B%20CAVITON" target="_blank">暂封材料</a>
+                                     </dd>
+                                      <dt><a href="javascript:void(0)">酸蚀粘接</a></dt>
+                                      <dd>
+                                        <a href="http://www.jwsmed.com/product/search?kw=%E6%B6%82%E8%8D%AF" target="_blank">粘接用品</a>
+                                        <a href="http://www.jwsmed.com/product/search?kw=%E7%B2%98%E6%8E%A5%E5%89%82" target="_blank">粘接剂（牙体）</a>
+                                        <a href="http://www.jwsmed.com/product/search?kw=%E9%85%B8%E8%9A%80%E5%89%82" target="_blank">酸蚀剂</a>
+                                        </dd>
+
+                                       <dt><a href="javascript:void(0)">口内常用材料</a></dt>
+                                       <dd>
+                                           <a href="http://www.jwsmed.com/product/search?kw=%E6%B2%B9" target="_blank">口内常用材料</a>
+                                           <a href="http://www.jwsmed.com/product/search?kw=DMG%20Ionosit%E7%88%B1%E8%AF%BA%E8%B5%9B%E5%85%89%E5%9B%BA%E5%8C%96%E5%9E%AB%E5%BA%95%E6%9D%90%E6%96%99" target="_blank">光固化垫底材料</a>
+                                        </dd>
+                                       <dt><a href="javascript:void(0)">根管治疗</a></dt>
+                                       <dd>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E7%89%99%E9%AB%93%E5%A4%84%E7%90%86" target="_blank">牙髓处理</a>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E6%A0%B9%E5%A4%87" target="_blank">根管预备</a>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E6%A0%B9%E7%AE%A1%E6%B6%88%E6%AF%92" target="_blank">根管消毒</a>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E6%A0%B9%E7%AE%A1%E5%85%85%E5%A1%AB" target="_blank">根管充填</a>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E9%99%A4%E4%B8%81%E5%85%8B" target="_blank">根管再治疗</a>
+                                       </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="javascript:void(0)">修复类</a>
+                              <div class="showbig" style="min-height:300px;left:165px;">
+                                  <dl>
+                                      <dt><a href="javascript:void(0)">桩核材料</a></dt>
+                                      <dd>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E6%A1%A9%E6%A0%B8" target="_blank">桩核树脂</a>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E7%BA%A4%E7%BB%B4%E6%A1%A9" target="_blank">纤维桩</a>
+                                      </dd>
+                                       <dt><a href="javascript:void(0)">粘接材料</a></dt>
+                                        <dd>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%B0%B4%E9%97%A8%E6%B1%80" target="_blank">水门汀粘固剂</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E6%B0%B4%E9%97%A8%E6%B1%80" target="_blank">树脂水门汀粘固剂</a>
+                                         <a href="http://www.jwsmed.com/product/search?kw=%E7%B2%98%E6%8E%A5%E6%A3%92" target="_blank">嵌体粘接棒 </a>
+                                         </dd>
+                                        <dt><a href="javascript:void(0)">印模材类</a></dt>
+                                        <dd>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E8%97%BB%E9%85%B8%E7%9B%90" target="_blank">藻酸盐</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E5%92%AC%E5%90%88%E8%AE%B0%E5%BD%95" target="_blank">咬合记录硅橡胶</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E6%89%98%E7%9B%98" target="_blank">托盘</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E6%90%85%E6%8B%8C%E7%AE%A1" target="_blank">搅拌管</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E7%A1%85%E6%A9%A1%E8%83%B6" target="_blank">硅橡胶</a>
+                                         </dd>
+                                        <dt><a href="javascript:void(0)">临时冠材料</a></dt>
+                                        <dd>
+                                           <a href="http://www.jwsmed.com/product/search?kw=%E4%B8%B4%E6%97%B6%E5%86%A0" target="_blank">临时冠</a>
+                                         </dd>
+                                         <dt><a href="javascript:void(0)">隔湿/辅助用品</a></dt>
+                                         <dd>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E4%B9%89%E9%BD%BF" target="_blank">义齿材料</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E6%A9%A1%E7%9A%AE%E9%9A%9C" target="_blank">橡皮障</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E5%BC%80%E5%8F%A3%E5%99%A8" target="_blank">开口器</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E4%B8%80%E6%AC%A1%E6%80%A7%E4%B8%B4%E6%97%B6%E5%86%A0%E7%94%A8%E6%90%85%E6%8B%8C%E7%AE%A1" target="_blank">搅拌管</a>
+                                          </dd>
+                                          <dt><a href="javascript:void(0)">车针</a></dt>
+                                          <dd>
+                                              <a href="http://www.jwsmed.com/product/search?kw=%E9%92%A8%E9%92%A2" target="_blank">钨钢车针</a>
+                                              <a href="http://www.jwsmed.com/product/search?kw=%E9%87%91%E5%88%9A%E7%A0%82" target="_blank">金刚砂车针</a>
+                                          </dd>
+                                  </dl>
+                              </div>
+                          </li>
+                           <li><a href="javascript:void(0)">器械类 </a>
+                               <div class="showbig" style="min-height:300px;left:165px;" >
+                                   <dl>
+                                       <dt><a href="javascript:void(0)">诊断器械</a></dt>
+                                       <dd>
+                                           <a href="http://www.jwsmed.com/product/search?kw=%E9%95%8A%E5%AD%90" target="_blank">镊子</a>
+                                           <a href="http://www.jwsmed.com/product/search?kw=%E5%8F%A3%E9%95%9C" target="_blank"> 口镜</a>
+                                           <a href="http://www.jwsmed.com/product/search?kw=%E6%8E%A2%E9%92%88" target="_blank"> 探针</a>
+                                       </dd>
+                                         <dt><a href="javascript:void(0)">牙周器械</a></dt>
+                                              <dd>
+                                                  <a href="http://www.jwsmed.com/product/search?kw=%E5%88%AE%E6%B2%BB" target="_blank">刮治器</a>
+                                               </dd>
+                                             <dt><a href="javascript:void(0)">美学修复</a></dt>
+                                             <dd>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E6%A0%91%E8%84%82%E5%A1%AB%E5%85%85%E5%99%A8%E5%A5%97%E8%A3%85" target="_blank">树脂充填器</a>
+                                              </dd>
+                                              <dt><a href="javascript:void(0)">口外器械</a></dt>
+                                              <dd>
+                                                  <a href="http://www.jwsmed.com/product/search?kw=%E7%BB%84%E7%BB%87%E5%89%AA" target="_blank">组织剪</a>
+                                                  <a href="http://www.jwsmed.com/product/search?kw=%E7%89%99%E6%8C%BA" target="_blank">拔牙铤</a>
+                                                  <a href="http://www.jwsmed.com/product/search?kw=%E5%88%86%E7%A6%BB%E5%99%A8" target="_blank">分离器</a>
+                                                  <a href="http://www.jwsmed.com/product/search?kw=%E7%BA%AF%E9%92%9B%E5%85%85%E5%A1%AB%E5%99%A8" target="_blank">充填器</a>
+                                               </dd>
+                                   </dl>
+                               </div>
+                           </li>
+                           <li><a href="javascript:void(0)">公用类 </a>
+                              <div class="showbig" style="min-height:300px;left:165px;" >
+                                  <dl>
+                                      <dt><a href="javascript:void(0)">诊室边柜</a></dt>
+                                      <dd>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E7%A7%BB%E5%8A%A8%E6%9F%9C" target="_blank">移动柜</a>
+                                          <a href="http://www.jwsmed.com/product/search?kw=%E6%8E%A8%E8%BD%A6" target="_blank"> 推车</a>
+                                      </dd>
+                                        <dt><a href="javascript:void(0)">口外耗材</a></dt>
+                                             <dd>
+                                                 <a href="http://www.jwsmed.com/product/search?kw=%E4%B8%80%E6%AC%A1%E6%80%A7%E6%89%8B%E6%9C%AF%E8%A1%A3%EF%BC%88%E5%B7%B2%E7%81%AD%E8%8F%8C%EF%BC%89%20Medicom" target="_blank">手术衣</a>
+                                                 <a href="http://www.jwsmed.com/product/search?kw=%E7%89%99%E7%A7%91%E6%89%8B%E6%9C%AF%E5%8C%85%20Medicom" target="_blank">手术包</a>
+                                                 <a href="http://www.jwsmed.com/product/search?kw=%E9%87%91%E7%8E%AF" target="_blank">缝针刀片</a>
+                                              </dd>
+                                  </dl>
+                              </div>
+                          </li>
+                           <li><a href="javascript:void(0)">感控消毒 </a>
+                                <div class="showbig" style="min-height:300px;left:165px;" >
+                                    <dl>
+                                        <dt><a href="javascript:void(0)">一次性耗材</a></dt>
+                                        <dd>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E5%BC%B1%E5%90%B8" target="_blank">吸唾管</a>
+                                            <a href="http://www.jwsmed.com/product/search?kw=%E5%99%A8%E6%A2%B0%E7%9B%92" target="_blank"> 器械盒</a>
+                                        </dd>
+                                          <dt><a href="javascript:void(0)">消毒用品</a></dt>
+                                           <dd>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E6%B6%88%E6%AF%92%E7%BA%B8%E5%8D%B7" target="_blank">消毒纸卷</a>
+                                               <a href="http://www.jwsmed.com/product/show/10527" target="_blank">器械消毒</a>
+                                               <a href="http://www.jwsmed.com/product/search?bs[0]=205&op=false&fc=0&fcn=0&sc=0&scn=0&st=default&kw=%E8%A1%A8%E9%9D%A2&px=1" target="_blank">表面消毒</a>
+                                            </dd>
+                                            <dt><a href="javascript:void(0)">手套</a></dt>
+                                            <dd>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E6%89%8B%E5%A5%97" target="_blank">乳胶手套</a>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E4%B8%81%E8%85%88" target="_blank">丁腈手套</a>
+                                               <a href="http://www.jwsmed.com/product/search?kw=PVC%E6%89%8B%E5%A5%97" target="_blank">PVC手套</a>
+                                            </dd>
+                                            <dt><a href="javascript:void(0)">棉制品</a></dt>
+                                            <dd>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E6%A3%89" target="_blank">棉卷</a>
+                                            </dd>
+                                            <dt><a href="javascript:void(0)">隔离防护</a></dt>
+                                            <dd>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E5%9B%B4%E5%B7%BE" target="_blank">纸围巾</a>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E7%89%99%E7%89%87%E4%BF%9D%E6%8A%A4%E5%A5%97" target="_blank">设备防护</a>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E9%9D%A2%E7%BD%A9" target="_blank">面罩</a>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E5%8F%A3%E7%BD%A9" target="_blank">口罩</a>
+                                               <a href="http://www.jwsmed.com/product/search?kw=%E9%98%B2%E6%8A%A4%E9%95%9C" target="_blank">防护镜</a>
+                                            </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                         <!--<li><a href="#"><samp>></samp></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"> </a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>
+                         <li><a href="#"></a>
+                             <div class="showbig">
+                                 <dl>
+                                     <dt><a href="#"></a></dt>
+                                     <dd>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                         <a href="#"></a>
+                                     </dd>
+                                 </dl>
+                             </div>
+                         </li>-->
+                     </ul>
+                 </li>
+                  <li style="width:14%;height:48px;text-align:center;"><a href="/footerbanner/ivoclar" target="_blank" style="padding:0;">品牌专区</a></li>
+                  <li style="width:14%;height:48px;text-align:center;"><a href="javascript:void(0)" style="padding:0;">增值服务</a></li>
+                  <li style="width:14%;height:48px;text-align:center;"><a href="javascript:void(0)" style="padding:0;">技术培训</a></li>
+                  <li style="width:14%;height:48px;text-align:center;"><a href="javascript:void(0)" style="padding:0;">产品培训</a></li>
+                  <li style="width:14%;height:48px;text-align:center;"><a href="/footerbanner/consult" target="_blank" style="padding:0;">咨询服务项目</a></li>
+                  <li style="width:14%;height:48px;text-align:center;"><a href="javascript:void(0)" style="padding:0;">社区</a></li>
+
+
+             </ul>
+
+         </div>
+          <script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+          <script>
+                //全部商品跳转
+                $(".allPro").click(function(){
+                    window.location.href="http://www.jwsmed.com/product/search?kw=";
+                });
+
+                $('.dropdown-menu li').each(function(){
+                       $(this).hover(function(){
+                            $(this).addClass("active");
+
+                       },function(){
+                           $(this).removeClass("active");
+
+                       }
+                      )
+
+                });
+
+              ;(function($, window, undefined) {
+                  // outside the scope of the jQuery plugin to
+                  // keep track of all dropdowns
+                  var $allDropdowns = $();
+
+                  // if instantlyCloseOthers is true, then it will instantly
+                  // shut other nav items when a new one is hovered over
+                  $.fn.dropdownHover = function(options) {
+
+                      // the element we really care about
+                      // is the dropdown-toggle's parent
+                      $allDropdowns = $allDropdowns.add(this.parent());
+
+                      return this.each(function() {
+                          var $this = $(this).parent(),
+                              defaults = {
+                                  delay: 500,
+                                  instantlyCloseOthers: true
+                              },
+                              data = {
+                                  delay: $(this).data('delay'),
+                                  instantlyCloseOthers: $(this).data('close-others')
+                              },
+                              options = $.extend(true, {}, defaults, options, data),
+                              timeout;
+
+                          $this.hover(function() {
+                              if(options.instantlyCloseOthers === true)
+                                  $allDropdowns.removeClass('open');
+
+                              window.clearTimeout(timeout);
+                              $(this).addClass('open');
+                          }, function() {
+                              timeout = window.setTimeout(function() {
+                                  $this.removeClass('open');
+                              }, options.delay);
+                          });
+                      });
+                  };
+
+                  $('[data-hover="dropdown"]').dropdownHover();
+              })(jQuery, this);
+                // 搜索框悬浮JS
+                window.onscroll = function(){
+                    var t = document.documentElement.scrollTop || document.body.scrollTop;
+                    if( t >= 89) {
+                        $(".headinfo").addClass("searchBox");
+                        $(".headbar").css("height","89px");
+                    } else {
+                        $(".headbar").css("height","39px");
+                        $(".headinfo").removeClass("searchBox");
+                    }
+
+                }
+
+              //商城采购系统增加入口
+                $("#poSystem").mouseenter(function(){
+                    $("#poList").css("display","block");
+                    $(this).css({"color":"#2a8fd3",'background-color':'#fff','border':'1px solid #E2E2E2','border-bottom':'none','border-top':'none'});
+                });
+                $("#poSystem").mouseleave(function(){
+                    $("#poList").css("display","none");
+                    $(this).css({"color":"#808080",'background-color':'#f5f5f5','border':'none'});
+
+                });
+                $("#poList").mouseenter(function(){
+                    $(this).css("display","block");
+                    $("#poSystem").css({"color":"#2a8fd3",'background-color':'#fff','border':'1px solid #E2E2E2','border-bottom':'none','border-top':'none'});
+                });
+                $("#poList").mouseleave(function(){
+                    $(this).css("display","none");
+                    $("#poSystem").css({"color":"#808080",'background-color':'#f5f5f5','border':'none'});
+
+                });
+
+                          </script>
+
+     </div>
+
+
+
+
+</div>
+
+<!--header end-->
+
+
+
+
+<!--mainer-->
+<div id="mainer">
+    <div class="inner">
+        <div class="nav-crumb">
+            <a href="/">首页</a> <samp>></samp>
+            <a href="#">公用类</a><samp>></samp>
+            <a href="#">一次性用品</a><samp>></samp>
+            <a href="#">一次性用品</a>
+        </div>
+        <div class="pagebox">
+            <div class="page-header">
+                <h1>康田正 一次性三用枪                                        <span class="saleTag" style="height:26px;color: #ff0619;display: inline-block;">满500减80</span>
+                                    </h1>
+            </div>
+            <div class="modal-body" style="padding:0;padding-bottom:50px;">
+                <!--left-->
+                <div class="body-left">
+                    <table class="table" style="border: none;">
+                        <tbody>
+                        <tr>
+                            <td width="215" style="border: none;" class="pro-img-box">
+                                <div style="min-height:270px;">
+                                    <div class="left-pro" style="width: 265px;">
+                                        <div class="t1" style="transform: rotate(-90deg);position: relative;top: 121px;left: 110px;z-index:10">
+                                            <a id="gotop"></a>
+                                            <div id="showArea" style="height:180px;">
+
+                                                                                                                                                            <a rel="zoom1" href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/2d718d9b72f1b0037da54189b8c09bab.JPG?x-oss-process=image/resize,w_500/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10" rev="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/2d718d9b72f1b0037da54189b8c09bab.JPG?x-oss-process=image/resize,m_pad,h_200,w_200" class="cur">
+                                                            <img src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/2d718d9b72f1b0037da54189b8c09bab.JPG?x-oss-process=image/resize,m_pad,h_100,w_100" style="width:43px;height:43px;transform: rotate(90deg);">
+                                                        </a>
+                                                                                                                                                                                                                    <a rel="zoom1" href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/ec086fd006a1d67a1ffaabd3f14fd494.JPG?x-oss-process=image/resize,w_500/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10" rev="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/ec086fd006a1d67a1ffaabd3f14fd494.JPG?x-oss-process=image/resize,m_pad,h_200,w_200">
+                                                            <img src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/ec086fd006a1d67a1ffaabd3f14fd494.JPG?x-oss-process=image/resize,m_pad,h_100,w_100" style="width:43px;height:43px;transform: rotate(90deg);">
+                                                        </a>
+                                                                                                                                                                                                                <a rel="zoom1" href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/d14a12cbadb178ef2a204e45c13c9979.JPG?x-oss-process=image/resize,w_500/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10" rev="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/d14a12cbadb178ef2a204e45c13c9979.JPG?x-oss-process=image/resize,m_pad,h_200,w_200">
+                                                            <img src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/d14a12cbadb178ef2a204e45c13c9979.JPG?x-oss-process=image/resize,m_pad,h_100,w_100" style="width:43px;height:43px;transform: rotate(90deg);">
+                                                        </a>
+                                                                                                                                                                                                                <a rel="zoom1" href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/408147c63be0b5888f84dd12c3c39732.JPG?x-oss-process=image/resize,w_500/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10" rev="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/408147c63be0b5888f84dd12c3c39732.JPG?x-oss-process=image/resize,m_pad,h_200,w_200">
+                                                            <img src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/408147c63be0b5888f84dd12c3c39732.JPG?x-oss-process=image/resize,m_pad,h_100,w_100" style="width:43px;height:43px;transform: rotate(90deg);">
+                                                        </a>
+                                                                                                                                                                                                                <a rel="zoom1" href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/a173a57e9e5eecf45a2b23ccbb7605ea.JPG?x-oss-process=image/resize,w_500/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10" rev="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/a173a57e9e5eecf45a2b23ccbb7605ea.JPG?x-oss-process=image/resize,m_pad,h_200,w_200">
+                                                            <img src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/a173a57e9e5eecf45a2b23ccbb7605ea.JPG?x-oss-process=image/resize,m_pad,h_100,w_100" style="width:43px;height:43px;transform: rotate(90deg);">
+                                                        </a>
+                                                                                                                                                </div>
+                                            <a id="gobottom"></a>
+                                        </div>
+                                        <div class="t2" style="position:relative;right:20px;">
+                                                                                        <a href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/2d718d9b72f1b0037da54189b8c09bab.JPG?x-oss-process=image/resize,w_500/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10" id="zoom1" class="MagicZoom">
+                                                <img src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/2d718d9b72f1b0037da54189b8c09bab.JPG?x-oss-process=image/resize,m_pad,h_200,w_200" id="main_img" class="main_img" style="width:200px; height:200px;" alt="佳沃思,口腔,齿科,耗材,采购"></a>
+                                            </a>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                <!--preview end-->
+                            </td>
+                            <td style="border: none;">
+                                <div class="goodsinfo" style="width:310px;min-height: 270px;">
+                                    <div class="_panel-box" style="padding-right: 20px;">
+
+                                    <b>康田正一次性三用枪</b><div><br>水气分离式三用枪</div><div><br>一次性使用，防交叉感染<br><br>独立水气通道保证气体干燥</div><div><br>喷头随意转动，使用方便<br><br><br></div>                                    </div>
+                                </div>
+                            </td>
+                            <td width="350" class="txt-center" style="border: none;">
+                                <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="320"
+                                       height="195" poster="" data-setup="{}" >
+                                    <source src="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/img/e600f5fc0eee409803940a08f5a35819.mp4" type='video/mp4' />
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="nav-tabs-custom pro_tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a aria-expanded="true" href="#tab_1" data-toggle="tab">商品详情</a></li>
+                            <li class=""><a aria-expanded="false" href="#tab_2" data-toggle="tab">适用范围</a></li>
+                            <li class=""><a aria-expanded="false" href="#tab_3" data-toggle="tab">证照信息</a></li>
+                            <li class=""><a aria-expanded="false" href="#tab_4" data-toggle="tab">产品手册</a></li>
+                            <li class="" id="commentTab" style="display:none"><a href="#comment" aria-expanded="false" id="commentTag" data-toggle="tab">商品评论</a></li>
+                        </ul>
+                        <!--<div class="bdshare-button">
+                            <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+                            <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+                            <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+                            <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+                        </div>-->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_1">
+                                <div style="min-height: 148px;">
+                                    <table class="table no-border">
+                                        <tbody>
+                                        <tr>
+                                            <td>品牌:康田正&nbsp;COTISEN</td>
+                                            <td>商品系列：</td>
+                                        </tr>
+                                                                                                                                                                                                        <tr>
+                                                            <td>证照号：冀沧械备20160007号</td>
+                                                            <td>证照产品名称：水枪头</td>
+                                                            <td>产地：河北</td>
+                                                        </tr>
+                                                                                     </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_2">
+                                <div style="min-height: 148px;">
+                                    可替代不锈钢三用枪喷头。 <br />
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_3" style="min-height:148px;">
+
+                                    <table class="table no-border">
+                                                                                                                                  <tr>
+                                                  <td> 证照号：冀沧械备20160007号&nbsp;&nbsp;&nbsp;
+                                                      <a class="btn btn-info btn-xs"  target="_blank"  href="http://oms.jwsmed.com/img/show?id=628" >下载</a><br />
+                                                  </td>
+                                                  <td>证照产品名称：水枪头</td>
+                                                  <td>产地：河北</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>医械类别：第一类医疗器械</td>
+                                                                                                        <td>证照有效期：长期有效</td>
+                                                                                                </tr>
+                                                                         		</table>
+
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_4">
+                                <div style="min-height: 148px;">
+                                    使用说明：<br />
+                                                                                                                    <div style="line-height: 30px">
+                                            <span style="float: left; width: 200px;">中文-10-11.jpg.pdf</span>
+                                            <a class="btn btn-info btn-xs" href="https://jws-pro.oss-cn-beijing.aliyuncs.com//res/product/doc/9f2ae54a6fd0f49889ea50eb5c53e98a.pdf" target="_blank"> 下载</a>
+                                        </div>
+                                                                                                            </div>
+                            </div>
+
+
+                             <!-- 商品评论 -->
+                           <div class="tab-pane" id="comment" style="#f5f5f5;">
+                              <div id="commentUserType" style="max-height:280px;border-bottom:1px solid #ddd;padding:5px 5px 5px 15px;  ">
+                                  <label>
+                                      <input type="radio" checked="checked" name="commentUserType" value=""/> 全部评论 <b id="totalAllTypeComment"></b>
+                                  </label>
+                                  <label style="margin-left: 10px;">
+                                      <input type="radio" name="commentUserType" value="1"/>专家评论<b id="totalExpertsTypeComment"></b>
+                                  </label>
+                              </div>
+
+                              <div id="comments" style="height:280px;overflow-y:scroll;overflow-x:hidden;border-bottom:1px solid #ddd;">
+                                <div class="innerComments">
+
+                                </div>
+                              </div>
+                              <div style="width:100%;height: auto;text-align: right;">
+                               <button class="btn btn-info" id="makeContent">评论</button>
+                              </div>
+                              <div class="form-group" id="editContent" style="display:none;">
+                                <div style="font-size:14px;float:left;">您的昵称</div>
+                                <div>
+                                    <input id="originalNikename" style="margin-left:15px;" onkeyup="value=value.replace(/[\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=10 type="text" placeholder="请输入您的昵称"/>
+                                </div>
+                                  <br/>
+                                <div class="col-sm-1">
+                                    <span></span>
+                                </div>
+                                <div style="position:relative">
+                                    <textarea id="originalContent" style="resize:none;maxLen" rows="5" cols="131" placeholder="请对此商品进行评价"></textarea>
+                                    <p style="position: absolute;bottom:-6px;left: 94.5%;display: inline;color: gray;"><span id="text-count">200</span>/200</p>
+                                </div>
+                                <div id="fileUploadContent" class="fileUploadContent"></div>
+                                <div style="margin-top:5px;">
+                                    <button  class="btn btn-info" onclick="commentAdd()">上传图片</button>
+                                </div>
+                                <div class="col-sm-6 col-md-offset-1">
+                                </div>
+                                <div style="text-align:right;">
+                                    <button style="margin-top:10px;" type="button" disabled id="submitContent" class="btn btn-info">提交评论</button>
+                                </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+
+                    <div class="nav-tabs-custom">
+                        <div class="tabs-box-menu">
+                            <a href="javascript:void(0);" class="tag-btn-left btn-un">
+                                <i class="fa fa-caret-left"></i>
+                            </a>
+                            <div class="nav-tabs-box">
+                                <!-- 大规格 -->
+                                <ul class="nav nav-tabs" id="bspec">
+                                                                            <li class="active" type="0">
+                                            <a href="javascript:void(0)" >带钢芯三用枪喷头</a>
+                                        </li>
+                                                                            <li  type="0">
+                                            <a href="javascript:void(0)" >彩色颜料芯三用枪喷头</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                            <a href="javascript:void(0);" class="tag-btn-right">
+                                <i class="fa fa-caret-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 规格 -->
+                    <div class="all-color">
+                        <ul id="sspec">
+                            <li class="active" type="1">
+                                <a data-id="0">
+                                    <!--小规格2-->
+                                </a>
+                            </li>
+                            <li class="" type="1">
+                                <a data-id="1">小规格1</a>
+                            </li>
+                        </ul>
+                    </div><br />
+
+                    <div class="table-div">
+                        <table class="table no-border" style="margin-bottom: 0;">
+                            <tbody id="tb">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <table class="table txt-center table-hover margin-bottom-un table-buy-list" >
+                        <thead>
+                        <tr>
+                            <td width="15%">供应商</td>
+                            <td width="10%">规格|子规格</td>
+                            <td width="12%">客户内部编码</td>
+                            <td width="10%">供货</td>
+                            <td width="10%">到货时间</td>
+                            <td width="10%">网站价格</td>
+                            <td width="13%">集团价格</td>
+                            <!--<td width="7%">上期货量</td>-->
+
+                            <td width="10%">数量</td>
+                            <!--<td width="5%">操作</td>-->
+                            <td width="10%">订货金额</td>
+                        </tr>
+                        </thead>
+                        <tbody id="is_login"></tbody>
+                    </table>
+                    <div class="form-table" style="position: relative;">
+                        <table class="table txt-center table-hover margin-bottom-un" id="specList"></table>
+
+                        <table id="ftable" class="table txt-center table-hover margin-bottom-un table-buy-list" style="position:relative" >
+                            <tfoot>
+                            <tr>
+                                <td colspan="5">
+									<!--<span class="buy-total" v-if="totalPrice">小计金额：-->
+										<!--<font class="text-red"></font>-->
+									<!--</span>-->
+                                    <span class="buy-total" style="font-size:14px;margin-right:30px;"></span>
+                                    <button name="inCart" type="button" class="btn btn-info">加入采购清单</button>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="nav-tabs-custom pro_tabs comments">
+                        <!--<ul class="nav nav-tabs">
+                            <li class="active"><a aria-expanded="true" href="#tab_1_1" data-toggle="tab">评价（0）</a></li>
+                            <li class=""><a aria-expanded="false" href="#tab_2_2" data-toggle="tab">专家评价</a></li>
+                        </ul>-->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_1_1">
+                                <!--data01-->
+                                <!--<div class="user-panel">
+                                    <div class="pull-left image">
+                                        <img src="img/pl/avatar04.png" class="img-circle" alt="User Image">
+                                    </div>
+                                    <div class="pull-left info">
+                                        <p class="username">xs贾医生 <i>VIP</i></p>
+						                <span class="starbox">
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                </span>
+                                        <br />
+                                        <div class="comment-imglist">
+                                            <img src="img/pl/001.png">
+                                            <img src="img/pl/002.png">
+                                            <img src="img/pl/003.png">
+                                        </div>
+                                        <br />
+						                <span>
+						                	从Z350  P60 科尔琥珀树脂可以 补活髓牙  其他树脂不可以的~<br />
+						                	之前以为 自酸蚀能达到 全酸蚀的效果 现在才明白  自酸蚀对釉质 强度粘结力很差  有钱可以 用 贺利氏 ibondSE 第七代升级版  或者 GC 第八代 釉质粘结较多用全酸蚀粘结剂 科尔树脂 没有 比色板很悲剧~~颜色很难搭配  想买套装建议买  opal贺利氏 自带比色板看过Beyong 的 碳纤维树脂充填器  感觉那个东西 很一般  没手感  700大洋  表面涂层 还容易掉 。一掉就废了
+						                	<br />所以个人用着感觉不错的还是 豪孚迪的 树脂充填器  真心好用 手感不错~
+                                        </span>
+                                        <br /><br />规格型号：<a href="#">胶囊装（20*0.2g/瓶）</a><br /><br />
+
+                                        <div class="border-top">
+                                            <div class="fa-pull-right interact">
+                                                <a href="#">点赞（83）</a>
+                                                <a href="#">回应（20）</a>
+                                                <a href="#">收藏</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+                                <!--data02-->
+                                <!--<div class="user-panel">
+                                    <div class="pull-left image">
+                                        <img src="img/pl/user7-128x128.jpg" class="img-circle" alt="User Image">
+                                    </div>
+                                    <div class="pull-left info">
+                                        <p class="username">王伟明</p>
+						                <span class="starbox">
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                </span>
+                                        <br />
+                                        <div class="comment-imglist">
+                                            <img src="img/pl/001.png">
+                                            <img src="img/pl/002.png">
+                                        </div>
+                                        <br />
+						                <span>
+						                	p60用于后牙，比较坚固，颜色没其它其它两个好看。z350和z250通用前后牙，前者美观，后者对牙体组织的牵拉力小，术后敏感发生率低。
+                                        </span>
+                                        <br /><br />规格型号：<a href="#">胶囊装（20*0.2g/瓶）</a><br /><br />
+                                        <div class="border-top">
+                                            <div class="fa-pull-right interact">
+                                                <a href="#">点赞（83）</a>
+                                                <a href="#">回应（20）</a>
+                                                <a href="#">收藏</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane" id="tab_2_2">
+                                <!--data01-->
+                                <!--<div class="user-panel">
+                                    <div class="pull-left image">
+                                        <img src="img/pl/avatar5.png" class="img-circle" alt="User Image">
+                                    </div>
+                                    <div class="pull-left info">
+                                        <p class="username">张主任 </p>
+						                <span class="starbox">
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                </span>
+                                        <br />
+                                        <div class="comment-imglist">
+                                        </div>
+                                        <br />
+						                <span>
+						                	从Z350  P60 科尔琥珀树脂可以 补活髓牙  其他树脂不可以的~<br />
+						                	之前以为 自酸蚀能达到 全酸蚀的效果 现在才明白  自酸蚀对釉质 强度粘结力很差  有钱可以 用 贺利氏 ibondSE 第七代升级版  或者 GC 第八代 釉质粘结较多用全酸蚀粘结剂 科尔树脂 没有 比色板很悲剧~~颜色很难搭配  想买套装建议买  opal贺利氏 自带比色板看过Beyong 的 碳纤维树脂充填器  感觉那个东西 很一般  没手感  700大洋  表面涂层 还容易掉 。一掉就废了
+						                	<br />所以个人用着感觉不错的还是 豪孚迪的 树脂充填器  真心好用 手感不错~
+                                        </span>
+                                        <br /><br />规格型号：<a href="#">胶囊装（20*0.2g/瓶）</a><br /><br />
+                                        <div class="border-top">
+                                            <div class="fa-pull-right interact">
+                                                <a href="#">点赞（83）</a>
+                                                <a href="#">回应（20）</a>
+                                                <a href="#">收藏</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+                                <!--data02-->
+                                <!--<div class="user-panel">
+                                    <div class="pull-left image">
+                                        <img src="img/pl/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                    </div>
+                                    <div class="pull-left info">
+                                        <p class="username">刘专家</p>
+						                <span class="starbox">
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                	<i class="iconfont icon-star"></i>
+						                </span>
+                                        <br />
+                                        <div class="comment-imglist">
+                                        </div>
+                                        <br />
+						                <span>
+						                	p60用于后牙，比较坚固，颜色没其它其它两个好看。z350和z250通用前后牙，前者美观，后者对牙体组织的牵拉力小，术后敏感发生率低。
+                                        </span>
+                                        <br /><br />规格型号：胶囊装（20*0.2g/瓶）<br /><br />
+                                        <div class="border-top">
+                                            <div class="fa-pull-right interact">
+                                                <a href="#">点赞（83）</a>
+                                                <a href="#">回应（20）</a>
+                                                <a href="#">收藏</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+
+                </div>
+                <!--right-->
+                <div class="body-right">
+                    <ul>
+                                            </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--mainer end-->
+<!--图片模态框 -->
+<div class="motai" id="mo">
+ <span class="closed" id="closed" style="width: 100%;height: 100%;position: absolute;"></span>
+ <img class="motaiimg" id="moimg" style="width:500px;height:500px;" alt="佳沃思,口腔,齿科,耗材,采购">
+
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content order-pop-list">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">订单列表</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <label  class="col-sm-4">加入周期订单：</label>
+                    <div class="col-sm-8">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> 周期性订单名称  <span class="text-primary">2017.12.22 12:30</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label  class="col-sm-4">加入周期订单：</label>
+                    <div class="col-sm-8">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                紧急订单名称  <span class="text-primary">2017.12.22 12:30</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                紧急订单名称  <span class="text-primary">2017.12.22 12:30</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                紧急订单名称  <span class="text-primary">2017.12.22 12:30</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                紧急订单名称  <span class="text-primary">2017.12.22 12:30</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                紧急订单名称 <span class="text-primary">2017.12.22 12:30</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label  class="col-sm-4">加入新订单：</label>
+                    <div class="col-sm-8">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked><span class="text-primary">新订单</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info"> &ensp;&ensp;确定&ensp;&ensp; </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<!--点击回复弹框-->
+<div class="modal fade" id="myApply" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
+            <div class="modal-body">
+                 <div class="form-group" id="editContent">
+                    <div style="font-size:14px;float:left;">您的昵称</div>
+                    <div>
+                        <input id="originalNikename01" style="margin-left:15px;" onkeyup="value=value.replace(/[\d]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" maxlength=10 type="text" placeholder="请输入您的昵称"/>
+                    </div>
+                      <br/>
+                    <div class="col-sm-1">
+                        <span></span>
+                    </div>
+                    <div style="position:relative">
+                        <textarea id="originalContent01" style="resize:none;position: relative;right: -2px;" rows="5" cols="77" placeholder="请对此评论进行回复"></textarea>
+                        <p style="position: absolute;bottom:-6px;;left: 88.5%;display: inline;color: gray;"><span id="text-count01">200</span>/200</p>
+                    </div>
+                    <div id="fileUploadContentReply" class="fileUploadContent"></div>
+                    <div style="margin-top:5px;">
+                        <button  class="btn btn-info" onclick="commentApply()">上传图片</button>
+                    </div>
+                 </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消回复</button>
+                 <button type="button" disabled id="saveApply" class="btn btn-info">提交回复</button>
+            </div>
+		</div>
+	</div>
+</div><!-- /.modal -->
+<a name="top"></a>
+
+
+<!--footer-->
+<div style="width:100%" class="footer">
+    <div style="width:100%;background:#2A8FD3;min-height:200px;margin-bottom:20px;">
+        <div class="footer_container">
+           <div style="width:100%;padding-top:20px;height:130px;border-bottom: 1px solid #55A5DC;">
+                 <div style="width:20%;float:left;margin-left:10%;">
+                               <div>
+                                   <p style="display:inline-block;float:left;width:50px;height:100px;line-height:100px;">
+                                       <img src="/img/zheng.png" style="width:50px;height:61px"/>
+                                   </p>
+                                   <p style="display:inline-block;float:left;width:170px;">
+                                       <span style="display:block;font-size:25px;color:#fff;padding-top:20px;padding-left:10px;">
+                                           品牌正品
+                                       </span>
+                                       <span style="display:block;font-size:17px;color:#AAD2ED;padding-left:10px;">
+                                           名牌大厂，买得放心
+                                       </span>
+                                  </p>
+                               </div>
+                           <div>
+
+
+                       <div>
+                   </div>
+
+               </div>
+
+           </div>
+
+           <div style="width:20%;float:left;">
+                                         <div>
+                                             <p style="display:inline-block;float:left;width:50px;height:100px;line-height:100px;">
+                                                 <img src="/img/zhi.png" style="width:50px;"/>
+                                             </p>
+                                             <p style="display:inline-block;float:left;width:170px;">
+                                                 <span style="display:block;font-size:25px;color:#fff;padding-top:20px;padding-left:10px;">
+                                                     严格质检
+                                                 </span>
+                                                 <span style="display:block;font-size:17px;color:#AAD2ED;padding-left:10px;">
+                                                     层层把控，确保安全
+                                                 </span>
+                                            </p>
+                                         </div>
+                                     <div>
+
+
+                                 <div>
+                             </div>
+
+                         </div>
+
+                     </div>
+
+         <div style="width:20%;float:left;">
+                                       <div>
+                                           <p style="display:inline-block;float:left;width:50px;height:100px;line-height:100px;">
+                                               <img src="/img/you.png" style="width:50px;"/>
+                                           </p>
+                                           <p style="display:inline-block;float:left;width:170px;">
+                                               <span style="display:block;font-size:25px;color:#fff;padding-top:20px;padding-left:10px;">
+                                                   优质服务
+                                               </span>
+                                               <span style="display:block;font-size:17px;color:#AAD2ED;padding-left:10px;">
+                                                   贴心服务，优质体验
+                                               </span>
+                                          </p>
+                                       </div>
+                                   <div>
+
+
+                               <div>
+                           </div>
+
+                       </div>
+
+                   </div>
+           <div style="width:20%;float:left;">
+                                         <div>
+                                             <p style="display:inline-block;float:left;width:50px;height:100px;line-height:100px;">
+                                                 <img src="/img/shuo.png" style="width:50px;"/>
+                                             </p>
+                                             <p style="display:inline-block;float:left;width:170px;">
+                                                 <span style="display:block;font-size:25px;color:#fff;padding-top:20px;padding-left:10px;">
+                                                     产品可追溯
+                                                 </span>
+                                                 <span style="display:block;font-size:17px;color:#AAD2ED;padding-left:10px;">
+                                                     产品来源，一目了然
+                                                 </span>
+                                            </p>
+                                         </div>
+                                     <div>
+
+
+                                 <div>
+
+                             </div>
+
+                         </div>
+
+                     </div>
+
+           </div>
+            <div style="width:1200px;height:220px;">
+                <ul style="padding-left:10%;padding-top:20px;">
+                    <li style="width:18%;float:left;font-size:16px;color:#fff;">
+                        购物指南
+                        <ul >
+                            <li style="padding:10px 0;"><a href="/footerbanner/about" style="color:#fff;font-size:13px;" target="_blank">关于我们</a></li>
+                            <li><a href="/footerbanner/uaualproblem" style="color:#fff;font-size:13px;" target="_blank">常见问题</a></li>
+                            <li style="padding:10px 0;"><a href="/footerbanner/poflow" target="_blank" style="color:#fff;font-size:13px;">采购流程</a></li>
+                            <li><a href="/footerbanner/orderhandle" target="_blank" style="color:#fff;font-size:13px;">订单操作</a></li>
+
+                        </ul>
+                    </li>
+                     <li style="width:18%;float:left;font-size:16px;color:#fff;">
+                         支付方式
+                         <ul >
+                             <li style="padding:10px 0;"><a href="/footerbanner/paymentoptions" target="_blank" style="color:#fff;font-size:13px;">支付选择</a></li>
+                             <li><a a href="/footerbanner/bill" target="_blank" style="color:#fff;font-size:13px;">发票问题</a></li>
+
+                        </ul>
+                     </li>
+
+                     <li style="width:18%;float:left;font-size:16px;color:#fff;">
+                           配送方式
+                           <ul >
+                              <li style="padding:10px 0;"><a href="/footerbanner/delservice" target="_blank" style="color:#fff;font-size:13px;">配送服务查询</a></li>
+                               <li><a href="/footerbanner/delexception" target="_blank" style="color:#fff;font-size:13px;">配送异常</a></li>
+                               <li style="padding:10px 0;"><a href="/footerbanner/receipt" target="_blank" style="color:#fff;font-size:13px;">验货与签收</a></li>
+
+
+                           </ul>
+                      </li>
+                       <li style="width:18%;float:left;font-size:16px;color:#fff;">
+                           售后服务
+                            <ul >
+                                <li style="padding:10px 0;"><a href="/footerbanner/returnsdetail" target="_blank" style="color:#fff;font-size:13px;">退换货细则</a></li>
+                                <li><a href="/footerbanner/returnsflow" target="_blank" style="color:#fff;font-size:13px;">退换货流程</a></li>
+                                <li style="padding:10px 0;"><a href="/footerbanner/promise" target="_blank" style="color:#fff;font-size:13px;">售后服务承诺</a></li>
+
+
+                            </ul>
+                       </li>
+                         <li style="width:18%;float:left;font-size:16px;color:#fff;">
+                             <img src="/img/Jarvis-QRcode.jpg" style="width:143px;height:143px;" >
+
+                                <span style="display:inline-block;color:#fff;">扫码关注微信公众号</span>
+
+                         </li>
+                </ul>
+            </div>
+            <div style="width:900px;margin:0 auto;background:#F5F5F5;">
+                    <!--<ul >
+                        <li style="width:16%;float:left;border-right:1px solid #bbb;height:20px;line-height:20px;text-align:center;"><a href="#" style="color:#808080;font-size:14px;">关于我们</a></li>
+                        <li style="width:16%;float:left;border-right:1px solid #bbb;height:20px;line-height:20px;text-align:center;"><a href="#" style="color:#808080;font-size:14px;">联系我们</a></li>
+                        <li style="width:16%;float:left;border-right:1px solid #bbb;height:20px;line-height:20px;text-align:center;"><a href="#" style="color:#808080;font-size:14px;">政策法规</a></li>
+                        <li style="width:16%;float:left;border-right:1px solid #bbb;height:20px;line-height:20px;text-align:center;"><a href="#" style="color:#808080;font-size:14px;">行业资讯</a></li>
+                        <li style="width:16%;float:left;border-right:1px solid #bbb;height:20px;line-height:20px;text-align:center;"><a href="#" style="color:#808080;font-size:14px;">招贤纳士</a></li>
+                        <li style="width:16%;float:left;height:20px;line-height:20px;text-align:center;"><a href="#" style="color:#808080;font-size:14px;">友情链接</a></li>
+
+                    </ul>-->
+                    <ul>
+                        <li style="width:18%;float:left;padding-bottom: 30px;"> <img src="/img/logo-footer.png" style="position:relative;top:25px;"/></li>
+                         <li style="width:82%;float:left;padding-bottom: 30px;">
+                              <div class="footcopy" style="color:#808080;border:none;">
+&copy;jwsmed.com | <a target="blank" href="/img/permit/yingye.pdf">佳沃思营业执照</a>| <a target="blank" href="/img/permit/dianxin.pdf">浙ICP证浙B2-20170279号</a> | 浙ICP备17006729号 |医疗器械经营许可证： <a target="blank" href="/img/permit/xuke.pdf">浙杭食药监械经营许20160610号</a>|药品经营许可证号：<a href="/img/jarvis.pdf" target="_blank">（浙）-经营性-2017-0003</a>
+ |第二类医疗器械经营备案凭证： <a target="blank" href="/img/permit/second.pdf">浙杭食药监械经营备20163240号</a>| <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010202001167" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beianbgs.png" style="width:15px;height:15px;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33010202001167号</p></a>|&nbsp;本网站所列数据，除特殊说明，所有数据均出自我司实验室测试                               </div>
+                          </li>
+                    </ul>
+            </div>
+
+           <!--<div id="footer">
+
+
+                 <div class="inner">
+
+                       <div class="bottom-banner'>
+                             <div>
+                                   <ul>
+                                       <li class="top-brand">
+                                          <span>品牌正品</span>
+                                       </li>
+                                       <li class="top-brand">
+                                            <span>严格质检</span>
+                                       </li>
+                                       <li class="top-brand">
+                                            <span>优质服务</span>
+                                       </li>
+                                        <li class="top-brand">
+                                            <span> 产品可追溯</span>
+                                        </li>
+                                   </ul>
+                             </div>
+
+
+                       </div>
+                       <div style="width:100%;background:#F5F5F5;margin-bottom:20px;">
+                           <div class="footlogo">
+                           </div>
+                           <div class="footcopy">
+                                 &copy;jwsmed.com 浙ICP证浙B2-20170279号 浙ICP备17006729号 药品经营许可证号：（浙）-经营性-2017-0003 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                           </div>
+                       </div>
+                 </div>
+
+           </div>-->
+           <!--footer end-->
+               <script>
+                   var _hmt = _hmt || [];
+                   (function() {
+                     var hm = document.createElement("script");
+                     hm.src = "https://hm.baidu.com/hm.js?83391ad49960d57ae4a33547b2f9be91";
+                     var s = document.getElementsByTagName("script")[0];
+                     s.parentNode.insertBefore(hm, s);
+                   })();
+               </script>
+           </div>
+        </div>
+
+    </div>
+
+</div>
+<!--<div id="footer">
+
+
+      <div class="inner">
+
+            <div class="bottom-banner'>
+                  <div>
+                        <ul>
+                            <li class="top-brand">
+                               <span>品牌正品</span>
+                            </li>
+                            <li class="top-brand">
+                                 <span>严格质检</span>
+                            </li>
+                            <li class="top-brand">
+                                 <span>优质服务</span>
+                            </li>
+                             <li class="top-brand">
+                                 <span> 产品可追溯</span>
+                             </li>
+                        </ul>
+                  </div>
+
+
+            </div>
+            <div style="width:100%;background:#F5F5F5;margin-bottom:20px;">
+                <div class="footlogo">
+                </div>
+                <div class="footcopy">
+                      &copy;jwsmed.com 浙ICP证浙B2-20170279号 浙ICP备17006729号 药品经营许可证号：（浙）-经营性-2017-0003 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                </div>
+            </div>
+      </div>
+
+</div>-->
+<!--footer end--><script type="text/javascript" src="/js/jquery-1.11.0.js" ></script>
+<script type="text/javascript" src="/js/vue.js" ></script>
+<script type="text/javascript" src="/js/lodash.js" ></script>
+<script type="text/javascript" src="/js/vue-resource.min.js" ></script>
+<script type="text/javascript" src="/js/bootstrap.min.js?v=20171025" ></script>
+<script type="text/javascript" src="/js/comm.js?v=20180125" ></script>
+<script type="text/javascript" src="/js/bootbox.min.js" ></script>
+<script type="text/javascript" src="/js/select2.full.min.js"></script>
+
+<script>
+    Vue.config.delimiters = ['${', '}'];
+    $(function(){
+        $(".brandmore").on("click",function(){
+            $(this).siblings("ul").toggleClass("open")
+        })
+        $(document).keypress(function(e) {
+            if (13 == e.which) {
+                window.location.href = '/product/search?kw='+$('.searchtext').val();
+            }
+        });
+        $('.searchsubmit').on("click", function () {
+            window.location.href = '/product/search?kw='+$('.searchtext').val();
+        });
+        $(document).on('click','#modalAgency',function(){
+            showModals();
+        });
+        $(document).on('click','#choseOk',function(){
+            saveChoseDefault();
+        });
+    });
+
+    function showModals(){
+        var html = '集团机构:&nbsp;<div style="width: 90%;height: 35px;">';
+        html += '<select id="modalAgencyId" style="width: 100%;height: 35px;">';
+        html += '</select>';
+        html += '</div>';
+        html += '<div style="padding: 5px 0;" >';
+        html += '<input type="checkbox" id="choseDefault" style="display: inline-block;vertical-align: middle;margin-right: 3px;">设为默认机构';
+        html += '</div>';
+        html += '<button type="button" id="choseOk" style="padding: 5px 15px;font-size: 14px;border: none;background: #fff;border: 1px #ccc solid;border-radius: 5px;">确认</button>';
+        html += '<button type="button" style="padding: 5px 15px;font-size: 14px;border: none;background: #fff;border: 1px #ccc solid;border-radius: 5px;color:black;display:inline-block;margin-left:15px;" data-dismiss="modal">取消</button>';
+        J.modal.show({
+            title:'选择机构',
+            content:html,
+            call:'saveChoseDefault()',
+            type:2,
+            close:true,
+            static:true
+        });
+        $.fn.modal.Constructor.prototype.enforceFocus = function () { }
+        $("#modalAgencyId").select2({
+            language: "zh-CN",
+            allowClear: true,
+            placeholder: "请选择",
+            ajax: {
+                url: "/common/showmodal",
+                dataType: 'json',
+                data: function (params) {
+                    params.offset = 15;
+                    params.page = params.page || 0;
+                    return {
+                        keyword: params.term,
+                        page: params.page,
+                        offset: params.offset
+                    };
+                },
+                cache: true,
+                processResults: function (res, params) {
+                    if (res.code==200) {
+                        var users = res.data.rows;
+                        var options = [];
+                        for (var i = 0, len = users.length; i < len; i++) {
+                            var option = {
+                                "id": users[i]["id"],
+                                "text": users[i]["agencyName"]+' - '+users[i]["agencyCode"]
+                            };
+                            options.push(option);
+                        }
+                        return {
+                            results: options,
+                            pagination: {
+                                more: (params.page * params.offset) < res.data.total
+                            }
+                        };
+                    }
+                },
+                escapeMarkup: function (markup) {
+                    return markup;
+                },
+                minimumInputLength: 1
+            }
+        });
+
+    
+    }
+
+    function saveChoseDefault() {
+        var agencyId = $("#modalAgencyId").val();
+        var isDefault = 0;
+        if ($("#choseDefault").is(":checked")) {
+            isDefault = 1;
+        }
+        if (J.empty(agencyId)) {
+            J.alert('请选择机构');
+            return false;
+        }
+        J.ajaxFun({
+            url:'common/chose',
+            type:'post',
+            data:{agencyId:agencyId,isDefault:isDefault},
+            call:function(o){
+                if (o.code==200) {
+                    J.refresh();
+                }else{
+                    J.alert('请重新选择机构');
+                }
+            }
+        });
+    }
+
+</script>
+
+<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="/js/fileUpload.js"></script>
+<script type="text/javascript" src="/js/jquery-addShopping.js"></script>
+<script type="text/javascript" src="/js/video.min.js"></script>
+<script type="text/javascript" src="/js/draft.js?20171129"></script>
+<script type="text/javascript" src="/js/xb_scroll.js"></script>
+<script type="text/javascript" src="/js/mzp-packed.js"></script>
+<script>
+    $dataSource = {
+        totalPrice : 0
+    };
+    var app = new Vue({
+        delimiters: ['${', '}'],
+        el:'#mainer',
+        data:$dataSource,
+        mounted: function() {
+			this.$nextTick(function(){
+			    $(".goodsinfo").xb_scroll();
+			})
+		},
+        methods:{
+            setPrice : function () {
+                app.totalPrice = 0;
+                $("#specList").find('tr').each(function () {
+                    _curNum = $(this).find('input[name=amount]').val();
+                    _curPrice = $(this).find('input[name=price]').val();
+                    _curTotal = _curNum*_curPrice;
+                    app.totalPrice += _curTotal;
+                });
+                //小计金额千分位
+                 function formatNumber(num,cent,isThousand) {
+                    num = num.toString().replace(/\$|\,/g,'');
+
+                    // 检查传入数值为数值类型
+                     if(isNaN(num))
+                      num = "0";
+
+                    // 获取符号(正/负数)
+                    sign = (num == (num = Math.abs(num)));
+
+                    num = Math.floor(num*Math.pow(10,cent)+0.50000000001); // 把指定的小数位先转换成整数.多余的小数位四舍五入
+                    cents = num%Math.pow(10,cent);       // 求出小数位数值
+                    num = Math.floor(num/Math.pow(10,cent)).toString();  // 求出整数位数值
+                    cents = cents.toString();        // 把小数位转换成字符串,以便求小数位长度
+
+                    // 补足小数位到指定的位数
+                    while(cents.length<cent)
+                     cents = "0" + cents;
+
+                    if(isThousand) {
+                     // 对整数部分进行千分位格式化.
+                     for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+                      num = num.substring(0,num.length-(4*i+3))+','+ num.substring(num.length-(4*i+3));
+                    }
+
+                    if (cent > 0)
+                     return (((sign)?'':'-') + num + '.' + cents);
+                    else
+                     return (((sign)?'':'-') + num);
+                   }
+
+                var html = '小计金额：<font class="text-red">'+'&yen'+formatNumber(app.totalPrice,2,1)+'</font>';
+                $('.buy-total').html(html);
+            }
+
+        }
+    });
+
+    $(function(){
+        $("#showArea a").on("click",function(){
+            $(this).addClass("cur").siblings().removeClass("cur")
+        })
+
+        function jQuery(e) {return document.getElementById(e);}
+        document.getElementsByClassName = function(cl) {
+            var retnode = [];
+            var myclass = new RegExp('\\b'+cl+'\\b');
+            var elem = this.getElementsByTagName('*');
+            for (var i = 0; i < elem.length; i++) {
+                var classes = elem[i].className;
+                if (myclass.test(classes)) retnode.push(elem[i]);
+            }
+            return retnode;
+        }
+        var MyMar;
+        var speed = 1; //速度，越大越慢
+        var spec = 1; //每次滚动的间距, 越大滚动越快
+        var ipath = 'images/'; //图片路径
+        var thumbs = document.getElementsByClassName('thumb_img');
+        for (var i=0; i<thumbs.length; i++) {
+            thumbs[i].onmouseover = function () {jQuery('main_img').src=this.rel;};
+            thumbs[i].onclick = function () {location = this.link}
+        }
+        jQuery('main_img').onclick = function () {history.go(0)}
+        jQuery('gotop').onmouseover = function() {  MyMar=setInterval(gotop,speed);}
+        jQuery('gotop').onmouseout = function() { clearInterval(MyMar);}
+        jQuery('gobottom').onmouseover = function() { MyMar=setInterval(gobottom,speed);}
+        jQuery('gobottom').onmouseout = function() {clearInterval(MyMar);}
+        function gotop() {jQuery('showArea').scrollTop-=spec;}
+        function gobottom() {jQuery('showArea').scrollTop+=spec;}
+
+        var ulWidth=$("tabs-box-menu ul").width();
+
+        $(".tabs-box-menu .tag-btn-right").on("click",function(){
+            var ul=$(this).prev().find("ul");
+            var ulMarginLeft=ul.css("marginLeft")
+            if(ulWidth-parseInt(ulMarginLeft)<0){
+                ul.css({"marginLeft":parseInt(ulMarginLeft)-100})
+            }
+        });
+        $(".tabs-box-menu .tag-btn-left").on("click",function(){
+            var ul=$(this).next().find("ul");
+            var ulMarginLeft=ul.css("marginLeft")
+            if(parseInt(ulMarginLeft)<2){
+                ul.css({"marginLeft":parseInt(ulMarginLeft)+100})
+            }
+        });
+        draft._agency = [];	    //机构数据
+        draft._agencyFlg = 0;      //是否有下属机构
+        draft._agencyId = 0;        //当前机构id
+
+        //规格切换
+        $(document).on("click","#bspec li",function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            detailGoods.changLSpec($(this).find("a").html());
+        });
+
+        $(document).on("click","#sspec li",function(){
+            $(this).addClass("active").siblings().removeClass("active");
+            detailGoods.changSSpec($(this).find("a").attr('data-id'));
+        });
+
+        detailGoods.changLSpec();
+
+        //加入采购清单
+        $(document).on("click","button[name=inCart]", function () {
+            if($.isEmptyObject(parent.dComm._tempData)){
+                J.alert('未填写产品数量');
+            }else{
+                 goshopping();
+            }
+        });
+        var goshopping = $("button[name=inCart]").shoping({
+            endElement:".buycar",
+            iconCSS:"",
+            iconImg:"/img/cart.png",
+            endFunction:function(element){
+                J.ajaxFun({
+                    url: 'user/addCart',
+                    type:'POST',
+                    data:{params:parent.dComm._tempData,type:1},
+                    call: function (o) {
+                        if (o.code==200){
+                            setTimeout("location.reload();",1000);
+                        }
+                    }
+                })
+            }
+        });
+
+        //搜索商品分货
+        $(document).on("click", "#specList a[name=part][data-toggle]", function () {
+            var sku = $(this).attr('data-id'),
+                goodsbase = parent.dComm._data[sku];	//商品基础数据
+            parent.dComm._currSku = sku;
+            parent.dComm.showPart(goodsbase, 1);
+        });
+
+        //搜索商品修改订货数量- copy add by jimmy
+        $(document).on("blur", "#specList input[name=amount]", function () {
+            if (!J.isInt($(this).val())) {
+                $(this).val(0);
+                return;
+            }
+            $(this).val(parseInt($(this).val()));
+            var amount = parseInt($(this).val()),
+                _tr = $(this).parents('tr'),
+                sku = _tr.attr('data-id'),
+                total = 0;
+            // 临时对象
+            if ($.isEmptyObject(parent.dComm._tempData)) parent.dComm._tempData = {};
+            if (amount) {
+                var sub = {};
+                sub[parent.draft._agencyId] = {agencyId: parent.draft._agencyId, orderCnt: amount};
+                parent.dComm._tempData[sku] = {skuCode: sku, orderCnt: amount, sub: sub};
+                _tr.addClass('act_bg');
+                _tr.find("a[name=part]").attr({"data-toggle": "modal"}).removeAttr("data-dismiss");
+                total = (parent.dComm._data[sku]['price'] * amount).toFixed(2);
+				_tr.find('td[name=price]').html('￥' + parent.draft.numFormat(total));
+            } else {
+                delete parent.dComm._tempData[sku];
+                _tr.removeClass('act_bg');
+                _tr.find("td[name=price]").html("￥0");
+                _tr.find("a[name=part]").attr({"data-dismiss": "modal"}).removeAttr("data-toggle");
+            }
+            app.setPrice();
+        });
+    });
+
+    var detailGoods = {
+        _LSpec: "带钢芯三用枪喷头",	//大规格
+        _specArr: {"\u5e26\u94a2\u82af\u4e09\u7528\u67aa\u55b7\u5934":{"specId":"\u5e26\u94a2\u82af\u4e09\u7528\u67aa\u55b7\u5934","specName":"\u5e26\u94a2\u82af\u4e09\u7528\u67aa\u55b7\u5934","specExt":[{"id":"20390","specName":"\u5e26\u94a2\u82af\u4e09\u7528\u67aa\u55b7\u5934","insideCodeProspec":"AWT01 \u56db\u6708\u6d3b\u52a8","specNameExt":"84*\u02783.87mm","packName":"200\u652f\/\u76d2","appStatus":"2","referencePricei":"1.00","minUseunit":"\u76d2","stockvssale":"1.00","qualityPreiod":"36","specNameDesc":"","rownum":null,"salesUnit":"\u76d2","specImg":[{"id":"20044","productdescId":"20390","dataname":"ec644446e9fcd5a105eca4b593240ced.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/ec644446e9fcd5a105eca4b593240ced.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/ec644446e9fcd5a105eca4b593240ced.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"20045","productdescId":"20390","dataname":"a8d8c53fb54472528a7acedd50c652e9.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/a8d8c53fb54472528a7acedd50c652e9.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/a8d8c53fb54472528a7acedd50c652e9.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"22094","productdescId":"20390","dataname":"a5ba4fda14e8dc96e79229fcea4822ec.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/a5ba4fda14e8dc96e79229fcea4822ec.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/a5ba4fda14e8dc96e79229fcea4822ec.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"22095","productdescId":"20390","dataname":"34fb65c462601a4a6332269a9fc93e05.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/34fb65c462601a4a6332269a9fc93e05.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/34fb65c462601a4a6332269a9fc93e05.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"}]}]},"\u5f69\u8272\u989c\u6599\u82af\u4e09\u7528\u67aa\u55b7\u5934":{"specId":"\u5f69\u8272\u989c\u6599\u82af\u4e09\u7528\u67aa\u55b7\u5934","specName":"\u5f69\u8272\u989c\u6599\u82af\u4e09\u7528\u67aa\u55b7\u5934","specExt":[{"id":"20392","specName":"\u5f69\u8272\u989c\u6599\u82af\u4e09\u7528\u67aa\u55b7\u5934","insideCodeProspec":"AWT03 \u56db\u6708\u6d3b\u52a8","specNameExt":"92*\u02783.89mm","packName":"200\u652f\/\u76d2","appStatus":"2","referencePricei":"1.00","minUseunit":"\u76d2","stockvssale":"1.00","qualityPreiod":"36","specNameDesc":"","rownum":null,"salesUnit":"\u76d2","specImg":[{"id":"20046","productdescId":"20392","dataname":"dabcab960858267e74085519377d0f4a.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/dabcab960858267e74085519377d0f4a.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/dabcab960858267e74085519377d0f4a.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"20047","productdescId":"20392","dataname":"c39d25dbbfde74519cf8cb46748383fd.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/c39d25dbbfde74519cf8cb46748383fd.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/c39d25dbbfde74519cf8cb46748383fd.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"22096","productdescId":"20392","dataname":"ad22dda088732da0176ed453a313735c.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/ad22dda088732da0176ed453a313735c.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/ad22dda088732da0176ed453a313735c.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"22097","productdescId":"20392","dataname":"03f2e85fa75b55bfebdcca85bb242171.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/03f2e85fa75b55bfebdcca85bb242171.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/03f2e85fa75b55bfebdcca85bb242171.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"},{"id":"22098","productdescId":"20392","dataname":"e05ae8df745facaa332c5f952d90f6f6.JPG","imgType":"bus_productImg_typ_desc","rownum":null,"srcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/e05ae8df745facaa332c5f952d90f6f6.JPG?x-oss-process=image\/resize,m_pad,h_200,w_200","bigcurl":"https:\/\/jws-pro.oss-cn-beijing.aliyuncs.com\/\/res\/product\/img\/e05ae8df745facaa332c5f952d90f6f6.JPG?x-oss-process=image\/resize,w_500\/watermark,image_cmVzL3dhdGVyTWFyay93YXRlck1hcmsucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHBfODA=,t_80,g_center,x_10,y_10"}]}]}},
+        _currSpec: {},  				//当规格
+        _Interval: '',
+        setValue: function () {
+            var htmlStr = '';
+            htmlStr += '<tr><td width="33.33%">平台编码：' + this._currSpec['id'] + '</th>';
+            htmlStr += '	<td width="33.33%">厂商编码：' + this._currSpec['insideCodeProspec'] + '</th>';
+            htmlStr += '	<td width="33.33%">包装方式：' + this._currSpec['packName'] + '</th>';
+            htmlStr += '</tr>';
+            htmlStr += '<tr>';
+            htmlStr += '	<td width="33.33%">库存单位：' + this._currSpec['minUseunit'] + '</td>';
+            htmlStr += '	<td width="33.33%">销售单位：' + this._currSpec['salesUnit'] + '</td>';
+            htmlStr += '	<td width="33.33%">库存单位和销售单位换算：' + parseInt(this._currSpec['stockvssale']) + this._currSpec['minUseunit'] + '/' + this._currSpec['salesUnit'] + '</td>';
+            htmlStr += '</tr>';
+            htmlStr += '<tr>';
+            htmlStr += '	<td colspan="3">';
+            htmlStr += '		<table class="table no-border table-table">';
+            if(this._currSpec['specNameDesc']!=null&&this._currSpec['specNameDesc']!=''){
+                 htmlStr += '<tr>';
+                 htmlStr += '<td width="60" valign="top" align="right" style="padding: 5px 0;">规格描述：</td>';
+                 htmlStr += '	<td>';
+                 htmlStr += '	<span id="proDes">' + this._currSpec['specNameDesc'] + '</span>';
+                 if (this._currSpec['specNameDesc'] && this._currSpec['specNameDesc'].length > 4000)
+                  htmlStr += '	<a href="javascript:void(0);" id="btnMore"></a>';
+                  htmlStr += '	</td>';
+                  htmlStr += '	</tr>';
+            }else{
+                htmlStr +='';
+            }
+
+            htmlStr += '			<tr>';
+            htmlStr += '				<td width="60" valign="top" align="right" style="padding: 5px 0;">保质期：</td>';
+            htmlStr += '				<td>';
+                if (this._currSpec['qualityPreiod']){htmlStr += this._currSpec['qualityPreiod']+'月';}else{htmlStr += '长期';}
+            htmlStr += '			</td></tr>';
+            htmlStr += '			<tr>';
+            htmlStr += '				<td width="60" valign="top" align="right" style="padding: 5px 0;">描述图：</td>';
+            htmlStr += '				<td>';
+            if (this._currSpec['specImg'].length > 0) {
+                $.each(this._currSpec['specImg'], function (i, v) {
+                    htmlStr += '<img src="' + v.srcurl + '" data_big="'+v.bigcurl+'" style="width:100px;height:100px"class="imgBig"  title="点击查看原图" alt="佳沃思,口腔,齿科,耗材,采购">';
+                })
+            } else {
+                htmlStr += '<img src="/img/losepic.jpg" data_big="/img/losepic.jpg" style="width:100px;height:100px"class="imgBig" title="点击查看原图" alt="佳沃思,口腔,齿科,耗材,采购">';
+            }
+            htmlStr += '				</td>';
+            htmlStr += '			</tr>';
+            htmlStr += '		</table>';
+            htmlStr += '	</td>';
+            htmlStr += '</tr>';
+            $("#tb").html(htmlStr);
+
+            $(".imgBig").each(function(){
+               $(this).on("click",function(){
+                    $("#mo").css("display","block");
+                    $("#moimg").attr("src",$(this).attr("data_big"));
+               })
+
+            })
+            $("#closed").on("click",function(){
+                $("#mo").css("display","none");
+            })
+        },
+        loadGoods:function () {
+            $("#specList").empty();
+            $("#is_login").html('');
+            $("#ftable").hide();
+            var isLook = 0
+            console.log(isLook);
+            var offsetTop=$("a[name='top']")[0].offsetTop
+            $(window).bind("scroll", function () {
+                var sTop = $(window).scrollTop();
+                var sTop = parseInt(sTop);
+                if (sTop > offsetTop) {
+                    $("#ftable").css({"position":"relative"})
+                }else {
+                     $("#ftable").css({"position":"relative"})
+                }
+            });
+            if (draft._agencyId==0){
+                var html = '<tr><td colspan="9"><br />请登录查看专属特价 <br /><br /><a type="button" href="/user/login?url=/product/show/13172&pro=1" class="btn btn-info"> &nbsp;&nbsp;&nbsp;立即登录&nbsp;&nbsp;&nbsp;  </a></td></tr>';
+                $("#is_login").html(html);
+            }else{
+                J.ajaxFun({
+                    url: 'product/likeSpecList',
+                    type: 'POST',
+                    data: { specId: this._currSpec['id']},
+                    call:function (o) {
+                        if(o.code == 200){
+                            var html = '';
+                            var pdf = parent.draft;
+                            var topAgency = '';
+                            var agencyCode = '';
+                            $.each(o.data, function (i, v) {
+                                var cnt = 0, hasOther = 0,total=0;
+                                if ($.isEmptyObject(parent.dComm._data[v['skuCode']])) parent.dComm._data[v['skuCode']] = v;
+                                if(!$.isEmptyObject(parent.dComm._tempData[v['skuCode']])) {
+                                    var dfg = parent.dComm._tempData[v['skuCode']];
+                                    cnt = dfg.orderCnt;
+                                    if ($.isEmptyObject(dfg.sub[pdf._agencyId]) || dfg.orderCnt != dfg.sub[pdf._agencyId].orderCnt) {
+                                        hasOther = 1;
+                                    }
+                                    total = parent.draft.numFormat((cnt * v.price).toFixed(2));
+                                }
+
+                                //专属供应商默认显示3星
+                                if ( v.exclusive == 1  && v.levelBrand=='com_permission_level_gp'){
+                                    v.suplierLevel='po_supliers_sys_level_3';
+                                }
+
+                             if( topAgency == '瑞尔集团' && v['levelBrand'] == 'com_permission_level_gp' && agencyCode != '101' ){
+                                   if( v['supliersShortName'] == '瑞尔圣彬' ){
+
+                                        html += '<tr data-id="'+ v['skuCode'] +'">';
+                                        html += '   <td width="15%" align="center">'+ v['supliersShortName'] +'<br><span class="starbox">'+ detailGoods.supLevel(v['suplierLevel']) +'</span></td>';
+                                        html += '   <td width="10%" style="word-break: break-all;">'+ v['specName'] +'|'+v['specextName']+'<i data-toggle="tooltip" data-placement="right" class="iconfont icon-packing" title="' + v['pkUnitName'] + '"></i></td>';
+                                        html += '   <td width="12%" style="word-break: break-all;">'+ v['insideCode'] +'</td>';
+                                        html += '   <td width="10%" align="center">'+ v['inventoryStatus'] +'</td>';
+                                       if(v['supplyAttrDays']){
+                                           html += '   <td width="10%" align="center">'+ v['supplyAttrDays'] +' 天</td>';
+                                       }else{
+                                           html += '   <td width="10%" align="center"></td>';
+                                       }
+                                        html += '   <td width="10%" align="center">￥'+ detailGoods.numberFormat(v['salePrice']) +' / '+ v['salesUnitName'] +'</td>';
+
+                                        if(v['discount']!=null){
+                                             html += '   <td width="13%" align="center"><input type="hidden" name="price" value="'+ v['price'] +'"><span class="text-blue">￥'+ detailGoods.numberFormat(v['price']) +' </span> / '+
+                                              detailGoods.numberFormat(v['salesUnitName'] )+'<br />折扣：'+ v['discount'] +' 折</td>';
+                                                }else{
+                                                  html += '   <td width="13%" align="center"><input type="hidden" name="price" value="'+ v['price'] +'"><span class="text-blue">￥'+ detailGoods.numberFormat(v['price']) +' </span> / '+
+                                                                                                                                                                detailGoods.numberFormat(v['salesUnitName'] )+'<br />折扣：10 折</td>';
+                                        }
+                                        // html += '   <td width="7%">'+ v['preCnt'] +'</td>';
+
+                                        html += '   <td width="10%" align="center"><input name="amount" '+(hasOther ? 'disabled="disabled"':'')+' type="number" value="'+ cnt +'"></td>';
+                                        //html += '   <td width="5%" align="center"><a name="part" data-id="' + v['skuCode'] + '" class="btn btn-info btn-xs" ' + (cnt ? 'data-toggle' : 'data-dismiss') + '="modal">分货</a></td>';
+                                        html += '   <td width="10%" name="price">￥'+ total +'</td>';
+                                        html += '</tr>';
+                                   }
+                             }else{
+                                html += '<tr data-id="'+ v['skuCode'] +'">';
+                                html += '   <td width="15%" align="center">'+ v['supliersShortName'] +'<br><span class="starbox">'+ detailGoods.supLevel(v['suplierLevel']) +'</span></td>';
+                                html += '   <td width="10%" style="word-break: break-all;">'+ v['specName'] +'|'+v['specextName']+'<i data-toggle="tooltip" data-placement="right" class="iconfont icon-packing" title="' + v['pkUnitName'] + '"></i></td>';
+                                html += '   <td width="12%" style="word-break: break-all;">'+ v['insideCode'] +'</td>';
+                                html += '   <td width="10%" align="center">'+ v['inventoryStatus'] +'</td>';
+                                 if(v['supplyAttrDays']){
+                                     html += '   <td width="10%" align="center">'+ v['supplyAttrDays'] +' 天</td>';
+                                 }else{
+                                     html += '   <td width="10%" align="center"></td>';
+                                 }
+                                html += '   <td width="10%" align="center">￥'+ detailGoods.numberFormat(v['salePrice']) +' / '+ v['salesUnitName'] +'</td>';
+                                if(v['discount']!=null){
+                                    html += '   <td width="13%" align="center"><input type="hidden" name="price" value="'+ v['price'] +'"><span class="text-blue">￥'+ detailGoods.numberFormat(v['price']) +' </span> / '+
+                                    detailGoods.numberFormat(v['salesUnitName'] )+'<br />折扣：'+ v['discount'] +' 折</td>';
+                                 }else{
+                                     html += '   <td width="13%" align="center"><input type="hidden" name="price" value="'+ v['price'] +'"><span class="text-blue">￥'+ detailGoods.numberFormat(v['price']) +' </span> / '+detailGoods.numberFormat(v['salesUnitName'] )+'<br />折扣：10 折</td>';
+                                 }
+                                // html += '   <td width="7%">'+ v['preCnt'] +'</td>';
+                                html += '   <td width="10%" align="center"><input name="amount" '+(hasOther ? 'disabled="disabled"':'')+' type="number" value="'+ cnt +'"></td>';
+                                html += '   <td width="10%" name="price">￥'+ total +'</td>';
+                                html += '</tr>';
+                                }
+                            });
+                            if (html && isLook == 1) {
+                                $("#specList").html(html);
+                                $("#ftable").show();
+                            }else{
+                                var html = '<tr><td colspan="9"><br />暂无采购权限 <br /><br /></td></tr>';
+                                $("#is_login").html(html);
+                            }
+                        }
+                    }
+                });
+            }
+        },
+        //供应商级别
+        supLevel : function(level) {
+            var str = '';
+            if ( !level) return str;
+            switch (level) {
+                case 'po_supliers_sys_level_1':
+                    str = '<i class="iconfont icon-star01"></i><i class="iconfont icon-star01"></i><i class="iconfont icon-star"></i>';
+                    break;
+                case 'po_supliers_sys_level_2':
+                    str = '<i class="iconfont icon-star01"></i><i class="iconfont icon-star"></i><i class="iconfont icon-star"></i>';
+                    break;
+                case 'po_supliers_sys_level_3':
+                    str = '<i class="iconfont icon-star"></i><i class="iconfont icon-star"></i><i class="iconfont icon-star"></i>';
+                    break;
+                default:
+                    str = '<i class="iconfont icon-star01"></i><i class="iconfont icon-star01"></i><i class="iconfont icon-star01"></i>';
+                    break;
+            }
+            return str;
+        },
+
+        // 改变大规格
+        changLSpec:function(spec){
+            if(spec) this._LSpec = spec;
+            this._currSpec = this._specArr[this._LSpec]['specExt'];
+            var html = '';
+            $.each( this._currSpec, function (i, v) {
+                html += '<li class="'+ (i == 0 ? 'active' : '') +'" type="1"><a data-id="'+ i +'">'+ v.specNameExt +'</a></li>';
+            })
+            $('#sspec').html(html);
+            this.changSSpec();
+        },
+        // 改变小规格
+        changSSpec:function(index){
+            index = index || 0;
+            this._currSpec = this._specArr[this._LSpec]['specExt'][index];
+            this.setValue();
+            this.loadGoods();
+        },
+        //金额加千分符
+        numberFormat: function (num) {
+            num = num || '0';
+            num=num.toString();
+            return num.replace(/\d{1,3}(?=(\d{3})+(\.\d*)?$)/g, '$&,');
+        }
+    }
+        //商品评论js脚本
+        // 是否首次打开商品评论
+    	var commentInitialFlag = false;
+    	// 商品评论图的地址
+        var commentPicPath ='';
+        // 商品回复图的地址
+        var replyPicPath = '';
+        // 用户的UserId(主键)
+        var commentAgencyUserId = 1063;
+        // 评论ID
+        var commentId = null;
+        // 父回复ID
+        var replyId = null;
+        // textarea文本框提交选择 true为评论的提交，false为回复提交
+        var contentTypeFlag = true;
+        // 回复类型的选择 true为评论的回复，false为回复的回复
+        var replyTypeFlag = true;
+        // 点赞类型选择true为评论的点赞，false为回复点赞
+        var praiseTypeFlag = true;
+        // 全部评论数
+        var totalAllTypeComment = 0;
+        // 全部专家评论数
+        var totalExpertsTypeComment = 0;
+        // 全部已展现评论数组
+        var commentIdArray = [];
+        //全部专家评论数组
+        //var commentSpeIdArray=[];
+        // 全部评论查询第几条
+        var offset = 0;
+        //专家评论查询第几条
+        //var offsetSpecail=0;
+        //主商品id
+        var productId='13172';
+        //全部评论/专家评论的全局变量
+        var commentUserTypeVal = "";
+
+        //评论数没有时商品评论tab标签不显示
+        $(document).ready(function(){
+         var param={'productId': productId};
+             J.ajaxFun({
+                     url:'product/getCountByProduct',
+                     type:'POST',
+                     data:{params:param},
+                     call:function(o){
+                     if(o.code==200){
+                        if(o.data>0){
+                           $("#commentTab").show();
+                        }else{
+                           $("#commentTab").hide();
+                        }
+                     }else{
+                        $("#commentTab").hide();
+                     }
+                 }
+            });
+                  var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+                  var nScrollTop = 0;   //滚动到的当前位置
+                  var nDivHight =280;
+
+                  $("#comments").scroll(function(){
+                    nScrollHight = $(this)[0].scrollHeight;
+                    nScrollTop = $(this)[0].scrollTop;
+                    if(nScrollTop + nDivHight >nScrollHight){
+                     if(commentUserTypeVal == ""){
+                        if(totalAllTypeComment <= offset){
+                            return;
+                        }
+                     }else if(commentUserTypeVal == 1){
+                        if(totalExpertsTypeComment <= offset){
+                            return;
+                        }
+                     }
+                   var param={'productId': productId,commentType:commentUserTypeVal,offset:offset,commentIdArray:commentIdArray+""};
+                      J.ajaxFun({
+                      url:'product/getCreateTimeList',
+                      data:{params:param},
+                      type:'GET',
+                        call:function(o){
+                            if(o.code==200){
+                                var commentProductList=o.data.commentProductList;
+                                var tempComment="";
+                                $.each(commentProductList, function(i1,n1){
+                                    tempComment +=
+                                        '<div class="form-group" class="col-sm-8">'+
+                                        '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename) + '</div>'+
+                                        '<br/>'+
+                                        '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                                        '<br/>'+
+                                        showImage(n1.picPath)+
+                                        '<div class="col-sm-2 col-md-offset-1" style="font-size:10px;color:#999;">'+ n1.createTime +'</div>'+
+                                        '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                                        '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '" style="font-size:12px;color:#333">' +
+                                        '<i></i>' +'<span>'+n1.totalReply+'</span>'+
+                                        '</a>' +
+                                        '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '" style="font-size:12px;color:#333">' +
+                                        '<i></i>' +'<span>'+ n1.totalPraise+'</span>'+
+                                        '</a>' +
+                                        '</div>'+
+                                        '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                                    if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                                        var tempReply = "";
+                                        $.each(n1.commentReplyList,function(i2,n2){
+                                            tempReply +=
+                                                '<div>'+
+                                                '<br/>'+
+                                                '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                                '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                                '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename) + '</b>' +
+                                                ' 回复 ' +
+                                                '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                                '</div>' +
+                                                '<br/>' +
+                                                '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                                '<br/>'+
+                                                showImage(n2.picPath) +
+                                                '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                                '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                                '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                                '<i></i>' +'<span>'+ n2.totalReply +'</span>'+ '</b>' +
+                                                '</a>' +
+                                                '&nbsp;&nbsp;' +
+                                                '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                                '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                                '</a>  ' +
+                                                '</div>'+
+                                                '</div>';
+                                        });
+                                        tempComment += tempReply;
+                                    }
+                                    tempComment +=
+                                        '</div>'+
+                                        remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                                        '</div>'+
+                                        '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                        '</div>';
+                                    offset++;
+                                });
+                                $(".innerComments").append(tempComment);
+                                commentInitialFlag =true;
+                            }else{
+                                //J.alert(o.message);
+                            }
+                        }
+                    });
+                    }
+               });
+        });
+
+        //切换商品评论tab标签切换时
+        $("#commentTab").click(function(){
+            if(commentInitialFlag){
+                return;
+            }
+            offset = 0;
+             var param={'productId': productId,commentType:null,offset:offset};
+              J.ajaxFun({
+               url:'product/getTotaPraiselList',
+               type:'GET',
+                 data:{params:param},
+                 call:function(o){
+                 if(o.code==200){
+                   var commentProductList=o.data.commentProductList;
+                   var tempComment="";
+                   commentIdArray = [];
+                   $.each(commentProductList, function(i1,n1){
+                        commentIdArray.push(n1.commentId);
+                        tempComment +=
+                                      '<div class="form-group" class="col-sm-8">'+
+                                        '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename) + '</div>'+
+                                            '<br/>'+
+                                            '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                                            '<br/>'+
+                                            showImage(n1.picPath)+
+                                            '<div class="col-sm-2 col-md-offset-1" style="font-size:10px;color:#999;">'+ n1.createTime +'</div>'+
+                                            '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                                                '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '" style="font-size:12px;color:#333">' +
+                                                    '<i></i>' +'<span>'+n1.totalReply+'</span>'+
+                                                '</a>' +
+                                                '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '" style="font-size:12px;color:#333">' +
+                                                    '<i></i>' +'<span>'+ n1.totalPraise+'</span>'+
+                                                '</a>' +
+                                            '</div>'+
+                                            '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                        if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                            var tempReply = "";
+                            $.each(n1.commentReplyList,function(i2,n2){
+                                tempReply +=
+                                            '<div>'+
+                                            '<br/>'+
+                                            '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                            '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                                 '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename) + '</b>' +
+                                                 ' 回复 ' +
+                                                 '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                            '</div>' +
+                                                '<br/>' +
+                                            '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                            '<br/>'+
+                                            showImage(n2.picPath) +
+                                            '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                            '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                                '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                                    '<i></i>' +'<span>'+ n2.totalReply +'</span>'+ '</b>' +
+                                                '</a>' +
+                                                '&nbsp;&nbsp;' +
+                                                '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                                    '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                                '</a>  ' +
+                                            '</div>'+
+                                            '</div>';
+                            });
+                            tempComment += tempReply;
+                        }
+                        tempComment +=
+                                        '</div>'+
+                                        remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                                        '</div>'+
+                                        '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                        '</div>';
+                    });
+                    $(".innerComments").empty();
+                    $(".innerComments").append(tempComment);
+                    commentInitialFlag =true;
+                 }else{
+                    J.alert(o.message);
+                 }
+             }
+            });
+            commentInitialFlag =true;
+        });
+
+       //切换全部评论和专家评论
+       $('input[name=commentUserType]').click(function(){
+           commentUserTypeVal=$(this).val();
+
+           if(commentUserTypeVal==""){
+               offset = 0;
+               var param={'productId': productId,commentType:null,offset:offset};
+               J.ajaxFun({
+                   url:'product/getTotaPraiselList',
+                   type:'GET',
+                   data:{params:param},
+                   call:function(o){
+                       if(o.code==200){
+                           var commentProductList=o.data.commentProductList;
+                           var tempComment="";
+                           commentIdArray = [];
+                           $.each(commentProductList, function(i1,n1){
+                               commentIdArray.push(n1.commentId);
+                               tempComment +=
+                                   '<div class="form-group" class="col-sm-8">'+
+                                   '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename)  + '</div>'+
+                                   '<br/>'+
+                                   '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                                   '<br/>'+
+                                   showImage(n1.picPath) +
+                                   '<div class="col-sm-2 col-md-offset-1" style="font-size:10px;color:#999;">'+ n1.createTime +'</div>'+
+                                   '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                                   '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '" style="font-size:12px;color:#333">' +
+                                   '<i></i>' +'<span>'+n1.totalReply+'</span>'+
+                                   '</a>' +
+                                   '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '" style="font-size:12px;color:#333">' +
+                                   '<i></i>' +'<span>'+ n1.totalPraise+'</span>'+
+                                   '</a>' +
+                                   '</div>'+
+                                   '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                               if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                                   var tempReply = "";
+                                   $.each(n1.commentReplyList,function(i2,n2){
+                                       tempReply +=
+                                           '<div>'+
+                                           '<br/>'+
+                                           '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                           '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                           '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename) + '</b>' +
+                                           ' 回复 ' +
+                                           '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                           '</div>' +
+                                           '<br/>' +
+                                           '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                           '<br/>'+
+                                           showImage(n2.picPath) +
+                                           '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                           '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                           '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                           '<i></i>' +'<span>'+ n2.totalReply +'</span>'+ '</b>' +
+                                           '</a>' +
+                                           '&nbsp;&nbsp;' +
+                                           '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                           '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                           '</a>  ' +
+                                           '</div>'+
+                                           '</div>';
+                                   });
+                                   tempComment += tempReply;
+                               }
+                               tempComment +=
+                                   '</div>'+
+                                   remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                                   '</div>'+
+                                   '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                   '</div>';
+                           });
+                           $(".innerComments").empty();
+                           $(".innerComments").append(tempComment);
+                           commentInitialFlag =true;
+                       }else{
+                           J.alert(o.message);
+                       }
+                   }
+               });
+               commentInitialFlag =true;
+                 var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+                 var nScrollTop = 0; //滚动到的当前位置
+                 var nDivHight =280;
+                 $("#comments").scroll(function(){
+                   nScrollHight = $(this)[0].scrollHeight;
+                   nScrollTop = $(this)[0].scrollTop;
+                   if(nScrollTop + nDivHight >nScrollHight){
+                       if(totalAllTypeComment <= offset){
+                         return;
+                       }
+                       var param={'productId': productId,commentType:null,offset:offset,commentIdArray:commentIdArray+""};
+                       J.ajaxFun({
+                       url:'product/getCreateTimeList',
+                       type:'GET',
+                       data:{params:param},
+                       call:function(o){
+                           if(o.code==200){
+                               var commentProductList=o.data.commentProductList;
+                               var tempComment="";
+                               $.each(commentProductList, function(i1,n1){
+
+                                   tempComment +=
+                                       '<div class="form-group" class="col-sm-8">'+
+                                       '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename) + '</div>'+
+                                       '<br/>'+
+                                       '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                                       '<br/>'+
+                                       showImage(n1.picPath) +
+                                       '<div class="col-sm-2 col-md-offset-1" style="font-size:10px;color:#999;">'+ n1.createTime +'</div>'+
+                                       '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                                       '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '" style="font-size:12px;color:#333">' +
+                                       '<i></i>' +'<span>'+n1.totalReply+'</span>'+
+                                       '</a>' +
+                                       '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '" style="font-size:12px;color:#333">' +
+                                       '<i></i>' +'<span>'+ n1.totalPraise+'</span>'+
+                                       '</a>' +
+                                       '</div>'+
+                                       '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                                   if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                                       var tempReply = "";
+                                       $.each(n1.commentReplyList,function(i2,n2){
+                                           tempReply +=
+                                               '<div>'+
+                                               '<br/>'+
+                                               '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                               '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                               '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename) + '</b>' +
+                                               ' 回复 ' +
+                                               '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                               '</div>' +
+                                               '<br/>' +
+                                               '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                               '<br/>'+
+                                               showImage(n2.picPath) +
+                                               '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                               '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                               '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                               '<i></i>' +'<span>'+ n2.totalReply +'</span>'+ '</b>' +
+                                               '</a>' +
+                                               '&nbsp;&nbsp;' +
+                                               '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                               '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                               '</a>  ' +
+                                               '</div>'+
+                                               '</div>';
+                                       });
+                                       tempComment += tempReply;
+                                   }
+                                   tempComment +=
+                                       '</div>'+
+                                        remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                                       '</div>'+
+                                       '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                       '</div>';
+                                   offset++;
+                               });
+                               $(".innerComments").append(tempComment);
+                               commentInitialFlag =true;
+                           }else{
+                               //J.alert(o.message);
+                           }
+                       }
+                   });
+                   }
+              });
+           } else if(commentUserTypeVal==1){
+           offset = 0;
+           var param={'productId': productId,commentType:1,offset:offset};
+           J.ajaxFun({
+               url:'product/getTotaPraiselList',
+               type:'GET',
+               data:{params:param},
+               call:function(o){
+                   if(o.code==200){
+                       var commentProductList=o.data.commentProductList;
+                       var tempComment="";
+                       commentIdArray = [];
+                       $.each(commentProductList, function(i1,n1){
+                           commentIdArray.push(n1.commentId);
+                           tempComment +=
+                               '<div class="form-group" class="col-sm-8">'+
+                               '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename)  + '</div>'+
+                               '<br/>'+
+                               '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                               '<br/>'+
+                               showImage(n1.picPath) +
+                               '<div class="col-sm-2 col-md-offset-1" style="font-size:10px;color:#999;">'+ n1.createTime +'</div>'+
+                               '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                               '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '" style="font-size:12px;color:#333">' +
+                               '<i></i>' +'<span>'+n1.totalReply+'</span>'+
+                               '</a>' +
+                               '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '" style="font-size:12px;color:#333">' +
+                               '<i></i>' +'<span>'+ n1.totalPraise+'</span>'+
+                               '</a>' +
+                               '</div>'+
+                               '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                           if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                               var tempReply = "";
+                               $.each(n1.commentReplyList,function(i2,n2){
+                                   tempReply +=
+                                       '<div>'+
+                                       '<br/>'+
+                                       '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                       '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                       '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename)  + '</b>' +
+                                       ' 回复 ' +
+                                       '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                       '</div>' +
+                                       '<br/>' +
+                                       '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                       '<br/>'+
+                                       showImage(n2.picPath) +
+                                       '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                       '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                       '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                       '<i></i>' +'<span>'+ n2.totalReply +'</span>'+ '</b>' +
+                                       '</a>' +
+                                       '&nbsp;&nbsp;' +
+                                       '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                       '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                       '</a>  ' +
+                                       '</div>'+
+                                       '</div>';
+                               });
+                               tempComment += tempReply;
+                           }
+                           tempComment +=
+                               '</div>'+
+                               remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                               '</div>'+
+                               '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                               '</div>';
+                       });
+                       $(".innerComments").empty();
+                       $(".innerComments").append(tempComment);
+                       commentInitialFlag =true;
+                   }else{
+                       //J.alert(o.message);
+                   }
+               }
+           });
+           commentInitialFlag =true;
+            var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+            var nScrollTop = 0; //滚动到的当前位置
+            var nDivHight =280;
+            $("#comments").scroll(function(){
+              nScrollHight = $(this)[0].scrollHeight;
+              nScrollTop = $(this)[0].scrollTop;
+              if(nScrollTop + nDivHight >nScrollHight){
+                  if(totalExpertsTypeComment <= offset){
+                    return;
+                  }
+                  var param={'productId': productId,commentType:1,offset:offset,commentIdArray:commentIdArray+""};
+                  J.ajaxFun({
+                  url:'product/getCreateTimeList',
+                  type:'GET',
+                  data:{params:param},
+                  call:function(o){
+                      if(o.code==200){
+                          var commentProductList=o.data.commentProductList;
+                          var tempComment="";
+                          $.each(commentProductList, function(i1,n1){
+
+                              tempComment +=
+                                  '<div class="form-group" class="col-sm-8">'+
+                                  '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename) + '</div>'+
+                                  '<br/>'+
+                                  '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                                  '<br/>'+
+                                  showImage(n1.picPath) +
+                                  '<div class="col-sm-2 col-md-offset-1" style="font-size:10px;color:#999;">'+ n1.createTime +'</div>'+
+                                  '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                                  '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '" style="font-size:12px;color:#333">' +
+                                  '<i></i>' +'<span>'+n1.totalReply+'</span>'+
+                                  '</a>' +
+                                  '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '" style="font-size:12px;color:#333">' +
+                                  '<i></i>' +'<span>'+ n1.totalPraise+'</span>'+
+                                  '</a>' +
+                                  '</div>'+
+                                  '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                              if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                                  var tempReply = "";
+                                  $.each(n1.commentReplyList,function(i2,n2){
+                                      tempReply +=
+                                          '<div>'+
+                                          '<br/>'+
+                                          '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                          '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                          '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename) + '</b>' +
+                                          ' 回复 ' +
+                                          '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                          '</div>' +
+                                          '<br/>' +
+                                          '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                          '<br/>'+
+                                          showImage(n2.picPath) +
+                                          '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                          '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                          '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                          '<i></i>' +'<span>'+ n2.totalReply +'</span>'+ '</b>' +
+                                          '</a>' +
+                                          '&nbsp;&nbsp;' +
+                                          '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                          '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                          '</a>  ' +
+                                          '</div>'+
+                                          '</div>';
+                                  });
+                                  tempComment += tempReply;
+                              }
+                              tempComment +=
+                                  '</div>'+
+                                  remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                                  '</div>'+
+                                  '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                  '</div>';
+                              offset++;
+                          });
+                          $(".innerComments").append(tempComment);
+                          commentInitialFlag =true;
+                      }else{
+                          //J.alert(o.message);
+                      }
+                  }
+              });
+              }
+         });
+       }
+       });
+
+
+        //点击评论 评论框消失
+        $("#makeContent").on("click",function(){
+            if(draft._agencyId==0){
+                 J.alert("您还未登录，请先登录！",function(){
+                       $(this).hide();
+                 },1000);
+                  return;
+            }else{
+                 $(this).parent().hide();
+                 $("#editContent").show();
+            }
+             //获取用户昵称
+            var modalAgency=$("#modalAgency").text();
+             J.ajaxFun({
+               url:'product/editCommentUserInfo',
+               type:'GET',
+               data:{},
+               call:function(o){
+                   if(o.code==200){
+                       if(o.data.originalNikename!="" && o.data.originalNikename!=null){
+                            $("#originalNikename").val(o.data.originalNikename);
+                       }else{
+                             $("#originalNikename").val(modalAgency);
+                       }
+                   }else{
+                       J.alert(o.message);
+                   }
+               }
+           })
+
+        });
+
+
+        //修改昵并提交
+        $("#originalNikename").blur(function(){
+            var originalNikename=$("#originalNikename").val();
+            originalNikename=$.trim(originalNikename);
+            var params={originalNikename:originalNikename}
+            if(originalNikename==""){
+                J.alert("昵称不能为空",function(){
+                    $(this).hide();
+                },1000);
+            }else{
+                  J.ajaxFun({
+                         url:'product/editCommentUserName',
+                         type:'POST',
+                         data:{params:params},
+                         call:function(o){
+                             if(o.code==200){
+                                J.alert(o.data,function(){
+                                       $(this).hide();
+                                 },1000);
+                             }else{
+                                 J.alert(o.message);
+                             }
+                         }
+                  })
+            }
+        });
+        //输入框字数的事实监听
+          $("#originalContent").on("input propertychange", function() {
+                $("#submitContent").attr("disabled",false);
+                var $this = $(this),
+                    _val = $this.val(),
+                    count = "";
+                if (_val.length > 200) {
+                    $this.val(_val.substring(0, 200));
+                }else if(_val.length==0 ||_val==""){
+                    $("#submitContent").attr("disabled",true);
+                }
+                count = 200 - $this.val().length;
+                $("#text-count").text(count);
+            });
+
+    	//单击切换商品评论的事件
+    	$("#commentTag").click(function(){
+    		if(commentInitialFlag){
+    			return;
+    		}
+    		var tempComment = "";
+    		offset = 0;
+    		 var param={'productId': productId,commentType:null,offset:offset};
+              J.ajaxFun({
+               url:'product/getTotaPraiselList',
+               type:'GET',
+               data:{params:param},
+    			call:function(o){
+    			    if(o.code==200){
+                        totalAllTypeComment = o.data.totalComment;
+                        $("#totalAllTypeComment").text(" (" + totalAllTypeComment + ") ");
+                        var totalExpertsTypeComment = o.data.totalExpertsComment;
+                        $("#totalExpertsTypeComment").text(" (" + totalExpertsTypeComment + ") ");
+                        var commentProductList = o.data.commentProductList;
+                        commentIdArray = [];
+                        $.each(commentProductList, function(i1,n1){
+                            commentIdArray.push(n1.commentId);
+                            tempComment +=
+                                '<div class="form-group" class="col-sm-8">'+
+                                '<div class="col-sm-12">' + showNicknameByCommentType(n1.commentType, n1.nikename) + '</div>'+
+                                '<br/>'+
+                                '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n1.commentContent + '</div>'+
+                                '<br/>'+
+                                showImage(n1.picPath) +
+                                '<div class="col-sm-2 col-md-offset-1" style="color:#999;font-size:10px">'+ n1.createTime +'</div>'+
+                                '<div class="col-sm-2 col-md-offset-7" style="text-align: right;">'+
+                                '<a href="javascript:void(0)" class="addCommentReply"  data-comment-id ="' + n1.commentId + '" data-comment-type="' + n1.commentType + '">' +
+                                '<i></i>' +'<span>'+ n1.totalReply+'</span>'+ '</b>' +
+                                '</a>' +
+                                '&nbsp;&nbsp;'+
+                                '<a href="javascript:void(0)" class="editPraise" data-praise-type="0" data-comment-id ="' + n1.commentId + '">' +
+                                '<i></i>' +'<span>'+ n1.totalPraise +'</span>'+ '</b>' +
+                                '</a>' +
+                                '</div>'+
+                                '<div id="reply" class="reply" data-comment-id ="' + n1.commentId + '">';
+                            if(n1.commentReplyList != null && n1.commentReplyList.length != 0){
+                                var tempReply = "";
+                                $.each(n1.commentReplyList,function(i2,n2){
+                                    tempReply +=
+                                        '<div>'+
+                                        '<br/>'+
+                                        '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                        '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                        '<b id="nikename">' + showNicknameByUserType(n2.userType, n2.nikename) + '</b>' +
+                                        ' 回复 ' +
+                                        '<b id="replyNikename">' + n2.replyNikename + '</b>' +
+                                        '</div>' +
+                                        '<br/>' +
+                                        '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + n2.replyContent + '</div>' +
+                                        '<br/>'+
+                                        showImage(n2.picPath) +
+                                        '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + n2.createTime + '</div>' +
+                                        '<div class="col-sm-2 col-sm-offset-5" style="text-align:right;">' +
+                                        '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + n2.commentId + '" data-reply-id ="' + n2.replyId + '">' +
+                                        '<i></i>' +'<span>'+ n2.totalReply+'</span>'+ '</b>' +
+                                        '</a>' +
+                                        '&nbsp;&nbsp;' +
+                                        '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + n2.replyId + '">' +
+                                        '<i></i>' +'<span>'+ n2.totalPraise +'</span>'+ '</b>' +
+                                        '</a>  ' +
+                                        '</div>'+
+                                        '</div>';
+                                });
+                                tempComment += tempReply;
+                            }
+                            tempComment +=
+                                '</div>'+
+                                remainderReplyNumber(n1.commentId, n1.totalReply, n1.commentReplyList) +
+                                '</div>'+
+                                '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                '</div>';
+                        });
+                        $(".innerComments").empty();
+                        $(".innerComments").append(tempComment);
+                        commentInitialFlag =true;
+    			    }else{
+    			        J.alert(o.message);
+    			    }
+    			}
+    		});
+    		var commentUserUrl = "/comment/user/get_user";
+    		var commentUserParam = {userId: commentAgencyUserId};
+    		$.getJSON(commentUserUrl, commentUserParam, function(data){
+    			if(data.status == 0){
+    				layer.msg(data.msg, {icon: 2}, function () {
+                        layerModel.closeParent();
+                    });
+    			}else if(data.status == 1){
+    				var commentUser = data.result;
+    				if(commentUser == null){
+    					return;
+    				}
+    				$("#originalNikename").val(commentUser.originalNikename);
+    			}
+    		});
+    	});
+
+    	//回复评论图标的单击事件
+    	$("#comments").on("click", ".addCommentReply", function(){
+    	     if(draft._agencyId==0){
+                 J.alert("您还未登录，请先登录！",function(){
+                       $(this).hide();
+                 },1000);
+             }else{
+                $(this).attr("data-toggle","modal");
+                $(this).attr("data-target","#myApply");
+                commentId = $(this).attr('data-comment-id');
+                replyId = null;
+                contentTypeFlag = false;
+                replyTypeFlag = true;
+                 //提交评论回复的单击事件
+                if(commentId>0){
+                     $("#saveApply").click(function(){
+                    if(contentTypeFlag){
+                        if(originalNikename01 == null || originalNikename01 == ""){
+                            J.alert("昵称不能为空");
+                            return;
+                        }
+                        if($("#originalContent").val() == null || $("#originalContent").val() == ""){
+                            J.alert("评论内容不能为空");
+                            return;
+                        }
+                        var param = {originalNikename01:$("#originalNikename01").val(),productId:productId, picPath: commentPicPath,originalCommentContent: $("#originalContent").val()};
+
+                    }else{
+                        if(originalNikename01 == null || originalNikename01 == ""){
+                            J.alert("昵称不能为空");
+                            return;
+                        }
+                        if($("#originalContent01").val() == null || $("#originalContent01").val() == ""){
+                            J.alert("回复内容不能为空");
+                            return;
+                        }
+
+                        param = {commentId:commentId, parentReplyId:0, originalNikename:$("#originalNikename01").val(),productId:productId, picPath: replyPicPath,
+                                originalReplyContent: $("#originalContent01").val()};
+
+                        J.ajaxFun({
+                            url:'product/getCommentReplySave',
+                            Type:'POST',
+                            data:{params:param},
+                            call:function(o){
+                                if(o.code==200){
+                                    J.alert("评论成功",function(){
+                                        $(this).hide();
+                                    },1000);
+                                    window.location.reload();
+                                }else{
+                                    J.alert(o.message);
+                                }
+                            }
+                        });
+                    }
+                });
+
+                }
+
+             }
+    	});
+    	//回复回复图标的单击事件
+    	$("#comments").on("click", ".addReplyReply", function(){
+    	    if(draft._agencyId==0){
+                 J.alert("您还未登录，请先登录！",function(){
+                       $(this).hide();
+                 },1000);
+                 return;
+            }else{
+                $(this).attr("data-toggle","modal");
+                $(this).attr("data-target","#myApply");
+                commentId = $(this).attr('data-comment-id');
+                replyId = $(this).attr('data-reply-id');
+                contentTypeFlag = false;
+                replyTypeFlag = false;
+                if(replyId>0){
+                  //提交评论回复的单击事件
+                   $("#saveApply").click(function(){
+                  if(contentTypeFlag){
+                      if(originalNikename01 == null || originalNikename01 == ""){
+                          J.alert("昵称不能为空");
+                          return;
+                      }
+                      if($("#originalContent").val() == null || $("#originalContent").val() == ""){
+                          J.alert("评论内容不能为空");
+                          return;
+                      }
+                      var param = {originalNikename01:$("#originalNikename01").val(),productId:productId, picPath: commentPicPath,originalCommentContent: $("#originalContent").val()};
+
+                  }else{
+                      if(originalNikename01 == null || originalNikename01 == ""){
+                          J.alert("昵称不能为空");
+                          return;
+                      }
+                      if($("#originalContent01").val() == null || $("#originalContent01").val() == ""){
+                          J.alert("回复内容不能为空");
+                          return;
+                      }
+
+                      param = {commentId:commentId, parentReplyId:replyId, originalNikename:$("#originalNikename01").val(),productId:productId, picPath: replyPicPath,
+                              originalReplyContent: $("#originalContent01").val()};
+                      J.ajaxFun({
+                          url:'product/getCommentReplySave',
+                          Type:'POST',
+                          data:{params:param},
+                          call:function(o){
+                              if(o.code==200){
+                                  J.alert("评论成功",function(){
+                                      $(this).hide();
+                                  },1000);
+                                  window.location.reload();
+                              }else{
+                                  J.alert(o.message);
+                              }
+                          }
+                      });
+                    }
+                  });
+                }
+            }
+            //评论获取用户昵称
+            var modalAgency=$("#modalAgency").text();
+             J.ajaxFun({
+               url:'product/editCommentUserInfo',
+               type:'GET',
+               data:{},
+               call:function(o){
+                   if(o.code==200){
+                       if(o.data.originalNikename!="" && o.data.originalNikename!=null){
+                            $("#originalNikename01").val(o.data.originalNikename);
+                       }else{
+                             $("#originalNikename01").val(modalAgency);
+                       }
+                   }else{
+                       J.alert(o.message);
+                   }
+               }
+           });
+        });
+       //评论回复修改昵并提交
+      $("#originalNikename01").blur(function(){
+          var originalNikename=$("#originalNikename01").val();
+          originalNikename=$.trim(originalNikename);
+          var params={originalNikename:originalNikename}
+          if(originalNikename==""){
+              J.alert("昵称不能为空",function(){
+                  $(this).hide();
+              },1000);
+          }else{
+                J.ajaxFun({
+                       url:'product/editCommentUserName',
+                       type:'POST',
+                       data:{params:params},
+                       call:function(o){
+                           if(o.code==200){
+                              J.alert(o.data,function(){
+                                     $(this).hide();
+                               },1000);
+                           }else{
+                               J.alert(o.message);
+                           }
+                       }
+                })
+          }
+      });
+       //评论回复输入框字数的事实监听
+       $("#originalContent01").on("input propertychange", function() {
+             $("#saveApply").attr("disabled",false);
+             var $this = $(this),
+                 _val = $this.val(),
+                 count = "";
+             if (_val.length > 200) {
+                 $this.val(_val.substring(0, 200));
+             }else if(_val.length==0 ||_val==""){
+                 $("#saveApply").attr("disabled",true);
+             }
+             count = 200 - $this.val().length;
+             $("#text-count01").text(count);
+         });
+
+    	//点赞图标的单击事件
+    	$("#comments").on("click", ".editPraise", function(){
+    	     if(draft._agencyId==0){
+                 J.alert("您还未登录，请先登录！",function(){
+                       $(this).hide();
+                 },1000);
+            }else{
+            var editPraise = $(this);
+            var praiseType = editPraise.attr('data-praise-type');
+            var params;
+            if(praiseType == 0){
+                params = { relId: $(this).attr('data-comment-id'),
+                        praiseType : praiseType};
+            }else if(praiseType == 1){
+                params = { relId: $(this).attr('data-reply-id'),
+                        praiseType : praiseType};
+            }
+            J.ajaxFun({
+                url:'product/editCommentPraise',
+                type:'POST',
+                data:{params:params},
+                call:function(o){
+                    if(o.code==200){
+                        editPraise.find("span").text(((editPraise.text()*1)+o.data));
+                    }else{
+                        J.alert(o.message,function(){
+                            $(this).hide();
+                        },1000);
+                    }
+                }
+            });
+         }
+
+        });
+         //评论文件上传
+        $("#fileUploadContent").initUpload({
+            "uploadUrl":"/common/ossComment",//上传文件信息地址
+            "size":2048,//文件大小限制，单位kb,默认不限制
+            "maxFileNumber":6,//文件个数限制，为整数
+            //"filelSavePath":"",//文件上传地址，后台设置的根目录
+            "beforeUpload":beforeUploadFun,//在上传前执行的函数
+            "onUpload":onCommentUploadFun,//在上传后执行的函数
+            //"autoCommit":true,//是否自动上传
+            "ismultiple":true,//是否选择多文件
+            //autoCommit:true,//文件是否自动上传
+            name:"file[]",
+            "fileType":['png','jpg','gif'],//文件类型限制，默认不限制，注意写的是文件后缀
+        });
+
+        //回复文件上传
+        $("#fileUploadContentReply").initUpload({
+            "uploadUrl":"/common/ossComment",//上传文件信息地址
+            "size":2048,//文件大小限制，单位kb,默认不限制
+            "maxFileNumber":6,//文件个数限制，为整数
+            "filelSavePath":"",//文件上传地址，后台设置的根目录
+            "beforeUpload":beforeUploadFun,//在上传前执行的函数
+            "onUpload":onReplyUploadFun,//在上传后执行的函数
+            //autoCommit:true,//文件是否自动上传
+            "fileType":['png','jpg','gif'],//文件类型限制，默认不限制，注意写的是文件后缀
+            name:"file[]",
+        });
+        function beforeUploadFun(opt){
+            opt.otherData =[{"name":"jarvis","value":"medical"}];
+        }
+        function onCommentUploadFun(opt,data){
+            var uploadId = opt.uploadId;
+            var fileList = opt.fileList;
+            for(var i=0,len1=data.length;i<len1;i++){
+                    commentPicPath =commentPicPath+data[i].path+';';
+
+            }
+            uploadTools.uploadError(opt);//显示上传错误
+            uploadTools.uploadSuccess(opt);//显示上传成功
+
+        };
+        function onReplyUploadFun(opt,data){
+            var uploadId = opt.uploadId;
+            var fileList = opt.fileList;
+            for(var i=0,len1=data.length;i<len1;i++){
+                    replyPicPath =replyPicPath+data[i].path+';';
+            }
+            uploadTools.uploadError(opt);//显示上传错误
+            uploadTools.uploadSuccess(opt);//显示上传成功
+
+        };
+
+         function commentAdd(){
+            var opt = uploadTools.getOpt("fileUploadContent");
+            uploadEvent.uploadFileEvent(opt);
+         }
+
+         function commentApply(){
+             var opt = uploadTools.getOpt("fileUploadContentReply");
+             uploadEvent.uploadFileEvent(opt);
+          }
+
+        //提交评论的单击事件
+        $("#submitContent").click(function(){
+            if(contentTypeFlag){
+                if(originalNikename == null || originalNikename == ""){
+                    J.alert("昵称不能为空");
+                    return;
+                }
+                if($("#originalContent").val() == null || $("#originalContent").val() == ""){
+                    J.alert("评论内容不能为空");
+                    return;
+                }
+                var param = {originalNikename:$("#originalNikename").val(),productId:productId, picPath: commentPicPath,originalCommentContent: $("#originalContent").val()};
+                J.ajaxFun({
+                    url:'product/getCommentSave',
+                    Type:'POST',
+                    data:{params:param},
+                    call:function(o){
+                        if(o.code==200){
+                            J.alert("评论成功",function(){
+                                $(this).hide();
+                            },1000);
+                            window.location.reload();
+                        }else{
+                            J.alert(o.message);
+                        }
+                    }
+                });
+
+            }else{
+                if(originalNikename == null || originalNikename == ""){
+                    J.alert("昵称不能为空");
+                    return;
+                }
+                if($("#originalContent").val() == null || $("#originalContent").val() == ""){
+                    J.alert("回复内容不能为空");
+                    return;
+                }
+                param = {commentId:commentId, parentReplyId:replyId, originalNikename:$("#originalNikename").val(),productId:productId, picPath: replyPicPath,
+                        originalReplyContent: $("#originalContent").val()};
+
+
+            }
+
+
+        });
+
+   //分割图片字符串
+        function showImage(allImage){
+            if(allImage!=null && allImage != ""){
+                var imageArray = allImage.split(";");
+                var html ='';
+                var n = 0;
+                html+='<div class="col-md-11 col-md-offset-1">';
+                for(var i=0;i<imageArray.length-1;i++){
+                    n++;
+                    html +="<img style='width:100px;height:100px;padding:5px;' class='CommentImgBig' data_big='"+imageArray[i]+"' src='"+imageArray[i]+"'/>";
+                }
+                html+='</div>';
+                return html;
+            }else{
+                return "";
+            }
+        }
+    //点击放大图片
+         $("#comments").on("click",".CommentImgBig",function(){
+             $(this).parent().find(".CommentImgBig").each(function(){
+                  $("#mo").css("display","block");
+                  $("#moimg").attr("src",$(this).attr("data_big"));
+             });
+         })
+
+
+      $("#closed").on("click",function(){
+          $("#mo").css("display","none");
+      })
+
+      // 剩余回复数的显示
+      function remainderReplyNumber(commentId ,total, commentReplyList){
+           var replyIdArray = new Array();
+           if(commentReplyList == null || commentReplyList == ""){
+                return "";
+           }else{
+              for(var i=0;i<commentReplyList.length;i++){
+                replyIdArray.push(commentReplyList[i].replyId);
+              }
+           }
+           var remainder = total - commentReplyList.length;
+           if(remainder>0){
+               var div =
+                        '<div class="col-md-11 col-md-offset-1">' +
+                            '<a href="javascript:void(0)" class="applyNumber" data-comment-id="'+commentId+'" data-offset="0" data-replyIdArray="' + (replyIdArray+"") + '">'+
+                                '<b>共</b>' +
+                                '<b>' +
+                                    '<span id="remainder">' +
+                                        remainder +
+                                    '</span>' +
+                                '</b>' +
+                                '<b>'+
+                                    '条回复' +
+                                '</b>' +
+                            '</a>'
+                        '</div>';
+               return div;
+           }else{
+               return "";
+           }
+      }
+    //查看剩余回复JS
+        $("#comments").on("click",".applyNumber",function(){
+                var commentId=$(this).attr("data-comment-id");
+                var offset=$(this).attr("data-offset");
+                var totalApplyNumber = $(this).find("#remainder").text();
+                var replyIdArray=$(this).attr("data-replyIdArray");
+                var param={commentId:commentId,offset:offset,replyIdArray:replyIdArray};
+                var reply = $(this).parent().prev();
+                var totalApplyNumberDom = $(this);
+                J.ajaxFun({
+                    url:'product/getCommentReplyList',
+                    Type:'GET',
+                    data:{params:param},
+                    call:function(o){
+                        if(o.code==200){
+                            var commentReplyList=o.data.commentReplyList;
+                            for(var i=0;i<commentReplyList.length;i++){
+                                var commentReply = commentReplyList[i];
+                                var div =
+                                            '<div>'+
+                                            '<br/>'+
+                                            '<hr style="height:1px;border:none;border-top:1px solid #BFBFBF;width:100%" />'+
+                                            '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' +
+                                                 '<b id="nikename">' + showNicknameByUserType(commentReply.userType, commentReply.nikename) + '</b>' +
+                                                 ' 回复 ' +
+                                                 '<b id="replyNikename">' + commentReply.replyNikename + '</b>' +
+                                            '</div>' +
+                                                '<br/>' +
+                                            '<div class="col-sm-11 col-md-offset-1" style="line-height:25px;">' + commentReply.replyContent + '</div>' +
+                                            '<br/>'+
+                                            showImage(commentReply.picPath) +
+                                            '<div class="col-sm-4 col-sm-offset-1" style="color:#999;font-size:10px">' + commentReply.createTime + '</div>' +
+                                            '<div class="col-sm-2 col-sm-offset-5" style="text-align:right">' +
+                                                '<a href="javascript:void(0);" class="addReplyReply" data-comment-id ="' + commentReply.commentId + '" data-reply-id ="' + commentReply.replyId + '">' +
+                                                    '<i></i>' +'<span>'+ commentReply.totalReply +'</span>'+ '</b>' +
+                                                '</a>' +
+                                                '&nbsp;&nbsp;' +
+                                                '<a href="javascript:void(0)" class="editPraise" data-praise-type="1" data-reply-id ="' + commentReply.replyId + '">' +
+                                                    '<i></i>' +'<span>'+ commentReply.totalPraise +'</span>'+ '</b>' +
+                                                '</a>  ' +
+                                            '</div>'+
+                                            '</div>';
+                                div = $(div);
+                                reply.append(div);
+                                offset++;
+                                totalApplyNumber--;
+                            }
+                            totalApplyNumberDom.attr("data-offset", offset);
+                            totalApplyNumberDom.find("#remainder").text(totalApplyNumber);
+                            if(totalApplyNumber <= 0){
+                                totalApplyNumberDom.parent().remove();
+                            }
+                        }
+                    }
+                });
+        });
+
+        // 根据评论类型展示不同的昵称
+        function showNicknameByCommentType(commentType, nickname){
+            if(commentType == 0){
+                return nickname;
+            }else if(commentType == 1){
+                return nickname+"（专家）";
+            }else{
+                return "";
+            }
+        }
+        // 根据用户类型展示不同的昵称
+        function showNicknameByUserType(userType, nickname){
+            if(userType == 0){
+                return nickname;
+            }else if(userType == 1){
+                return nickname+"（专家）";
+            }else if(userType == 2){
+                return "客服";
+            }else{
+                return "";
+            }
+        }
+
+</script>
+
+</body>
+</html>
