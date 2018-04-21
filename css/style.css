@@ -1,4 +1,4 @@
-/* CSS Document */
+﻿/* CSS Document */
 
 body{
 	font-family:'Microsoft YaHei';
@@ -17,6 +17,7 @@ a:link, a:active ,a:hover ,a:visited{
 /*顶部固定位置导航条上半部分*/
 .header{
 	width: 100%;
+	min-width: 1200px;
 	position: fixed;
 	top: 0px;
 	z-index: 9999;
@@ -481,3 +482,41 @@ footer .container .about a{
 	color: #335b7c;
 }
 /*底部footer和版权部分结束*/
+
+/*补充：返回顶部，锚点链接，采购系统，全部商品开始*/
+.go_top{
+	position: fixed;
+	right: 5px;
+	bottom: 10px;
+}
+.nav_right{
+	position: fixed;
+	right: 90px;
+	top: 230px;
+	text-align: center;
+	z-index: 66;
+	height: auto;
+}
+.nav_right ul{
+	border-bottom: 1px solid #e3e1e1;
+}
+.nav_right ul li{
+	width: 67px;
+	height: 42px;
+	line-height: 42px;
+	border: 1px solid #e3e1e1;
+	border-bottom: 0;
+	background-color: white;
+}
+.nav_right ul li a{
+	display: block;
+}
+.nav_right ul li a:hover{
+	background-color: #2A8FD3;
+	color: white;
+}
+.current{
+	background-color: #2A8FD3;
+	color: white;
+}
+/*补充：返回顶部，锚点链接，采购系统，全部商品结束*/
