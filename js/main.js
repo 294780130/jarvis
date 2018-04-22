@@ -27,7 +27,7 @@ window.onscroll = function() {
 	else{
 		$('.nav_right').addClass('unable');
 	}
-	console.log(window.scrollY);
+	//console.log(window.scrollY);
 } 
 
 
@@ -61,4 +61,13 @@ $("#go_top").on('click', function(e) {
   $('html, body').animate({
     'scrollTop': $('body').offset().top
   }, 400);
+});
+
+$(function (){
+	 $('.category_box ul li').mouseover(function(){
+		$(this).addClass('hov');
+	 });
+	$('.category_box ul li').mouseout(function(){
+		$(this).removeClass('hov');
+	 });
 });
